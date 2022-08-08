@@ -5,7 +5,7 @@ $("#boton").click(function(){
 		  type: 'POST',
 		  url: '../php/validar.php',
           dataType: "json",
-		  data: 'usu=' + $("#u").val() + '&pass='+ $("#p").val() + '&que=L',
+		  data: 'usu=' + $("#email").val() + '&pass='+ $("#password").val() + '&	=L',
 		  success: function (datos) {
 				if(datos.status == 'ok'){
                 	mensaje="Bienvenido mi estimado "+datos.result['Nombre']+" "+datos.result['Apellido']+"";
