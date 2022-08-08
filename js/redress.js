@@ -3,9 +3,9 @@ $(document).ready(function(){
 $("#boton").click(function(){
 	$.ajax({
 		  type: 'POST',
-		  url: '../php/validar.php',
+		  url: '../php/login.php',
           dataType: "json",
-		  data: 'usu=' + $("#email").val() + '&pass='+ $("#password").val() + '&	=L',
+		  data: 'mail=' + $("#email").val() + '&contra='+ $("#password").val() + '&	=L',
 		  success: function (datos) {
 				if(datos.status == 'ok'){
                 	mensaje="Bienvenido mi estimado "+datos.result['Nombre']+" "+datos.result['Apellido']+"";
