@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-$("#boton").click(function(){
+$("#botonL").click(function(){
 	$.ajax({
 		  type: 'POST',
 		  url: '../php/login.php',
           dataType: "json",
-		  data: 'mail=' + $("#email").val() + '&contra='+ $("#password").val() + '&	=L',
+		  data: 'mail=' + $("#email").val() + '&contra='+ $("#password").val(),
 		  success: function (datos) {
 				if(datos.status == 'ok'){
                 	mensaje="Bienvenido mi estimado "+datos.result['Nombre']+" "+datos.result['Apellido']+"";
@@ -13,7 +13,7 @@ $("#boton").click(function(){
                 	$("#divt").show();
                 }else{
 					mensaje="Usuario no encontrado,si desea registrarse haga click: ";
-	               	mensaje+="<a href='../html/registrar.html' /a>aqui.";
+	               	mensaje+="<a href='http://localhost/FG_ReDress/ReDress/html/registrar.html' /a>aqui.";
 	               	$("#divt").html(mensaje);
 	               	$("#divt").show();
                 }
@@ -25,11 +25,7 @@ $("#boton").click(function(){
 });
 
 
-$("#R").mouseover(function(){
-	$(".boton").css("cursor","pointer");
-});
-
-$("#R").click(function(){
+$("#botonR").click(function(){
 	if (validar()){
 		$.ajax({
 			  type: 'POST',
@@ -56,33 +52,6 @@ $("#R").click(function(){
 		}
 });
 
-function validar(){
-	salida=true;
-	mensaje='';
-	if ($("#u").val()==''){
-		salida=false;
-		mensaje="Falta el Usuario";
-		$("#u").focus();
-	}else if($("#p").val()==''){
-		salida=false;
-		mensaje="Falta la Contraseña";
-		$("#p").focus();
-	}else if($("#n").val()==''){
-		salida=false;
-		mensaje="Falta el Nombre";
-		$("#n").focus();
-	}else if($("#a").val()==''){
-		salida=false;
-		mensaje="Falta el Apellido";
-		$("#a").focus();
-	}else if($("#d").val()==''){
-		salida=false;
-		mensaje="Falta el DNI";
-		$("#d").focus();
-	}
-	$("#divt").html(mensaje);
-	$("#divt").show();
-	return salida;
 }
 /*
 
