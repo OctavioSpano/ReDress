@@ -1,32 +1,35 @@
-<?php
- 
-$link = new mysqli("localhost", "root", "rootroot");
-mysqli_select_db($link, "redressbd");
-if ($link ->connect_error){
-    die("Connection failed: " . $link->connect_error);
-    }
-
-$data = array ();
-		
-	$sql = "Select IDUsuario, Nombre, Apellido from usuarios where Mail='" . $_REQUEST ['Mail'] . "'and Contrasenia='" . $_REQUEST ['Contrasenia']."'";
-	$res = $link->query($sql);
-	$i = 0;
-		if ($res -> num_rows > 0){
-			$userData = $res -> fetch_assoc();
-			/*while($userData = $res -> fetch_assoc()){
-				$data['status'] = 'ok';
-				$data [$i] = $userData;		
-			}*/
-			$data ['status'] = 'ok';
-			$data ['result'] = $userData;
-		}else{
-			$data ['status'] = 'err';
-			$data ['result'] = '';
-		} 
-		//retorno los datos en formato json
-		echo json_encode($data);
-		$link->close();
-
-    
-	
-?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ReDress</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+          <h1>Iniciar Sesión</h1>
+          <form method="POST" action="validar.php">
+              <div class="txt_field">
+                  <input type="email" id="email" name="mail" required>
+                  <span></span>
+                  <label>Email</label>
+              </div>
+              <div class="txt_field">
+                  <input type="password" id="password" name="contra" required>
+                  <span></span>
+                  <label>Contrase&ntilde;a</label>
+              </div>
+              <input id="botonL" type="Submit" value="Aceptar">
+              <div class="signup_link">
+                  No tenés una cuenta? <a href="registrar.php">Registrate aquí</a>
+              </div>
+          </form>
+          <div id="divt">
+           
+        </div>
+      </div>
+  </div>
+  </body>
+</html>

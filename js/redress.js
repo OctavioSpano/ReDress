@@ -1,3 +1,4 @@
+/*
 $(document).ready(function(){
 
 $("#botonL").click(function(){
@@ -86,4 +87,3 @@ $("#R").click(function(){
 
 
 
-});

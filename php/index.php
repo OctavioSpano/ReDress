@@ -8,8 +8,8 @@
   </head>
   <body>
   	<div id="login-reg" class="acceso-usuario">
-  		<a href="http://localhost/FG_ReDress/ReDress/php/registrar.php">Registrarte |</a>
-  		<a href="http://localhost/FG_ReDress/ReDress/php/login.php"> Iniciar Sesión</a>
+  		<a href="registrar.php">Registrarte |</a>
+  		<a href="login.php"> Iniciar Sesión</a>
 
 </div>
 </body>
