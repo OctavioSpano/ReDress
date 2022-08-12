@@ -142,3 +142,86 @@ input[type="Submit"]:hover{
   width: 100vw;
   height: 25vh;
 }
+
+.btnpublicar{
+  width: 5vw;
+  height: 10vh;
+  border-radius: 70px;
+  font-family: Compote;
+  position: absolute;
+  top:450px;
+  right: 18px;
+  background: white;
+  color: black;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.centerpub{
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  transform: translate(-50%, -50%);
+  width: 29vw;
+  border-radius: 10px;
+}
+
+
+.centerpub h1{
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.centerpub form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+form .txt_pub{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+
+.txt_pub input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_pub label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: white;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.txt_pub span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  width: 0px;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+
+.txt_pub input:focus ~ label,
+.txt_pub input:valid ~ label{
+  top: -5px;
+  color: #2691d9;
+}
+
+.txt_pub input:focus ~ span::before,
+.txt_pub input:Valid ~ span::before{
+  width: 100%;
+}
