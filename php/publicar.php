@@ -21,7 +21,7 @@
                   <span></span>
                   <label>Descripción</label>
               </div>
-              <input id="botonL" class="btnpublicar" type="Submit" value="Publicar">
+              <input id="botonP" class="btnpublicar" type="Submit" value="Publicar">
           </form>
           <div id="divt">
            
