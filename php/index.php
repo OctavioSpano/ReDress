@@ -10,12 +10,16 @@
   	<div id="login-reg" class="acceso-usuario">
   		<a href="registrar.php">Registrarte |</a>
   		<a href="login.php"> Iniciar Sesión</a>
+</div>
     <div id="publicarbtn" >
       <button class="btnpublicar" onclick="location.href='publicar.php'">+</button>
   </div>
+  <a href="index.php" >
+  <img id="logofoto" src="../imagenes/Logo.png"  >
+  </a>  
 
 
 
-</div>
+
 </body>
 </html>
