@@ -152,8 +152,8 @@ input[type="Submit"]:hover{
 }
 
 .btnpublicar{
-  width: 5%;
-  height: 10%;
+  width: 5vw;
+  height: 10vh;
   border-radius: 75%;
   font-family: Compote;
   position: absolute;
@@ -241,3 +241,15 @@ form .txt_pub{
   left: 43%; 
   position: absolute;
  }
+
+#lista_prendas{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  font-family: 'Compote';
+  font-style: white;
+}

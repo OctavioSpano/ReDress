@@ -12,7 +12,7 @@
   		<a href="login.php"> Iniciar Sesión</a>
 </div>
     <div id="publicarbtn" >
-      <button class="btnpublicar" onclick="location.href='publicar.php'">+</button>
+      <button class="publicarbtn" onclick="location.href='publicar.php'">+</button>
   </div>
   <a href="index.php" >
   <img id="logofoto" src="../imagenes/Logo.png"  >

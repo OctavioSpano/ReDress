@@ -11,10 +11,18 @@
       <div class="centerpub">
           <h1>Publicá tu prenda</h1>
           <form method="POST" action="validar.php">
-              <div class="txt_pub">
-                  <input type="email" id="email" name="mail" required>
-                  <span></span>
-                  <label>Nombre de la prenda</label>
+              
+              <div>
+                <input list="tipo_prenda" id="lista_prendas" name="lista_prendas" placeholder="Tipo de prenda: "/>
+                <datalist id="tipo_prenda">
+                  <option value="Remera"></option>
+                  <option value="Pantalon"></option>
+                  <option value="Buzo/Hoodie"></option>
+                  <option value="Campera"></option>
+                  <option value="Short/Bermuda"></option>
+                  <option value="Ropa Interior"></option>
+                  <option value="Zapatillas"></option>
+                </datalist>
               </div>
               <div class="txt_pub">
                   <input type="password" id="password" name="contra" required>
