@@ -131,9 +131,9 @@ input[type="Submit"]:hover{
 #logofoto{
   position:absolute;
   top:3%;
-  left: 45%;
-  height: 22%;
-  width: 12%;
+  left: 3%;
+  height: 24%;
+  width: 13%;
 
 }
 
@@ -157,8 +157,8 @@ input[type="Submit"]:hover{
   border-radius: 75%;
   font-family: Compote;
   position: absolute;
-  top:80%;
-  right: 5%;
+  top:85%;
+  right: 3%;
   background: black;
   color: white;
   font-size: 30px;
@@ -252,4 +252,18 @@ form .txt_pub{
   outline: none;
   font-family: 'Compote';
   font-style: white;
+}
+
+.barrabusqueda{
+  width: 45%;
+  height: 5%;
+  border: 1px solid;
+  position: absolute;
+  font-family: Compote;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer; 
+  top: 10.5%; 
+  left: 25%;
 }
