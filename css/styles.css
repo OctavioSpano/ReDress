@@ -136,6 +136,15 @@ input[type="Submit"]:hover{
   width: 13%;
 
 }
+#corazon{
+  position:absolute;
+  top: 10%;
+  right:23%;
+  height:52px;
+  width:60px;
+  
+}
+
 
 .signup_link a{
   color: #2691d9;
@@ -267,6 +276,9 @@ form .txt_pub{
   top: 10.5%; 
   left: 25%;
   text-align: center;
+}
+#btnbusqueda{
+display: none;
 }
 
 #lista_prendas::placeholder {
