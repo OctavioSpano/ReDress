@@ -12,7 +12,7 @@
   		<a href="login.php"> Iniciar Sesión</a>
     </div>
     <form id="searchbtn" action="">
-      
+      <img id="lupita" src="../imagenes/Imagen Lupa.png">
       <input type="search" name="barrabusqueda" placeholder="¿Qué estabas buscando?" class="barrabusqueda">
       
     </form>

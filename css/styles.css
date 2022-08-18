@@ -315,3 +315,11 @@ display: none;
   margin: 14px;
   background-color: #dadada;
 }
+
+#lupita{
+  position: absolute;
+  top: 11%;
+  left: 26%;
+  height: 5%;
+  width: 2.5%;
+}
