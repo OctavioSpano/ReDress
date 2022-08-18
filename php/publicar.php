@@ -10,7 +10,7 @@
   	<div class="container">
       <div class="centerpub">
           <h1>Publicá tu prenda</h1>
-          <form method="POST" action="validar.php">
+          <form method="POST" action="publicacion.php">
               
               <div>
                 <input list="tipo_prenda" id="lista_prendas" name="lista_prendas" placeholder="Tipo de prenda: "/>
@@ -25,10 +25,16 @@
                 </datalist>
               </div>
               <div class="txt_pub">
-                  <input type="password" id="password" name="contra" required>
+                  <input type="text" id="desc" name="desc" required>
                   <span></span>
                   <label>Descripción</label>
               </div>
+              <label class="file-input" for="file">
+              <div class="drop-zone"> <p><b>Select a file</b> or drop it here!</p>
+              </div>
+              <input type="file" id="file">
+              <</label>
+              
               <input id="botonP" class="txt" type="Submit" value="Publicar">
           </form>
           <div id="divt">

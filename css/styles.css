@@ -167,8 +167,8 @@ input[type="Submit"]:hover{
 
 .centerpub{
   position: absolute;
-  top: 200px;
-  left: 250px;
+  top: 50%;
+  left: 20%;
   transform: translate(-50%, -50%);
   width: 29vw;
   border-radius: 10px;
@@ -206,7 +206,7 @@ form .txt_pub{
   position: absolute;
   top: 50%;
   left: 5px;
-  color: white;
+  color: black;
   transform: translateY(-50%);
   font-size: 16px;
   pointer-events: none;
@@ -251,7 +251,7 @@ form .txt_pub{
   background: none;
   outline: none;
   font-family: 'Compote';
-  font-style: white;
+  color: white;
 }
 
 .barrabusqueda{
@@ -266,4 +266,40 @@ form .txt_pub{
   cursor: pointer; 
   top: 10.5%; 
   left: 25%;
+  text-align: center;
+}
+
+#lista_prendas::placeholder {
+  color: black;
+}
+.file-input { 
+  display: grid;
+  grid-template-areas: "stack"; 
+  width: 360px; 
+  height: 300px; 
+  background-color: #eeeeee; 
+  border-radius: 8px; 
+  text-align: center;
+  right: 70%;
+}
+
+.file-input > * {
+  grid-area: stack;
+}
+
+.file-input> input { 
+  opacity: 0;
+}
+
+.file-input > .drop-zone { 
+  margin: 12px; 
+  border: dashed 2px #aaaaaa; 
+  border-radius: 4px;
+  transition: margin 200ms;
+  height: 270px;
+}
+
+.file-input.active> .drop-zone {
+  margin: 14px;
+  background-color: #dadada;
 }
