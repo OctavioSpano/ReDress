@@ -105,7 +105,7 @@ form .txt_field{
 }
 
 input[type="Submit"]{
-  width: 100%;
+  width: 30%;
   height: 50px;
   border: 1px solid;
   font-family: Compote;
@@ -179,45 +179,57 @@ input[type="Submit"]:hover{
   top: 50%;
   left: 20%;
   transform: translate(-50%, -50%);
-  width: 29vw;
+  width: 40%;/*29vw;*/
   border-radius: 10px;
 }
 
 
-.centerpub h1{
+.h1{
   text-align: center;
   padding: 0 0 20px 0;
   border-bottom: 1px solid silver;
 }
 
-.centerpub form{
+
+#frm1{
   padding: 0 40px;
   box-sizing: border-box;
 }
 
-form .txt_pub{
-  position: relative;
+.txt_pub{
+  position: absolute;
   border-bottom: 2px solid #adadad;
   margin: 30px 0;
-}
-
-.txt_pub input{
-  width: 100%;
-  padding: 0 5px;
-  height: 40px;
-  font-size: 16px;
+  position: absolute;
+  left: 15%;
+  top: 25%;
+  font-size: 23px;
   border: none;
   background: none;
   outline: none;
+  font-family: 'Compote'
+
 }
 
-.txt_pub label{
-  position: absolute;
+.txt_pub #desc{
+  width: 25%;
+  padding: 0 5px;
+  height: 20%;
   top: 50%;
+  font-size: 23px;
+  border: none;
+  background: none;
+  font-family: 'Compote';
+  outline: none;
+}
+
+.txt_pub #lbldesc{
+  position: absolute;
+  top: 25%;
   left: 5px;
   color: black;
   transform: translateY(-50%);
-  font-size: 16px;
+  font-size: 23px;
   pointer-events: none;
 }
 
@@ -232,14 +244,14 @@ form .txt_pub{
   transition: .5s;
 }
 
-.txt_pub input:focus ~ label,
-.txt_pub input:valid ~ label{
+.txt_pub #desc:focus ~ #lbldesc,
+.txt_pub #desc:valid ~ #lbldesc{
   top: -5px;
   color: #2691d9;
 }
 
-.txt_pub input:focus ~ span::before,
-.txt_pub input:Valid ~ span::before{
+.txt_pub #desc:focus ~ span::before,
+.txt_pub #desc:Valid ~ span::before{
   width: 100%;
 }
 .bad{
@@ -252,15 +264,17 @@ form .txt_pub{
  }
 
 #lista_prendas{
-  width: 100%;
+  /*width: 100%;
   padding: 0 5px;
-  height: 40px;
-  font-size: 16px;
+  height: 40px;*/
+  position: absolute;
+  left: 15%;
+  font-size: 23px;
   border: none;
   background: none;
   outline: none;
-  font-family: 'Compote';
-  color: white;
+  font-family: 'Compote', black;
+
 }
 
 .barrabusqueda{
@@ -274,7 +288,7 @@ form .txt_pub{
   font-weight: 700;
   cursor: pointer; 
   top: 10.5%; 
-  left: 25%;
+  left: 29%;
   text-align: center;
 }
 #btnbusqueda{
@@ -285,14 +299,16 @@ display: none;
   color: black;
 }
 .file-input { 
+
   display: grid;
   grid-template-areas: "stack"; 
-  width: 360px; 
+  width: 20%; /*360px;*/ 
   height: 300px; 
   background-color: #eeeeee; 
   border-radius: 8px; 
   text-align: center;
-  right: 70%;
+  position: relative;
+  left: 50%;
 }
 
 .file-input > * {
@@ -316,10 +332,87 @@ display: none;
   background-color: #dadada;
 }
 
+.container{
+  text-align: center;
+}
+
 #lupita{
   position: absolute;
   top: 11%;
-  left: 26%;
-  height: 5%;
-  width: 2.5%;
+  left: 29.5%;
+  height: 4.5%;
+  width: 2%;
+  z-index: 2;
+}
+
+#campana{
+  position:absolute;
+  top: 9%;
+  right:72%;
+  height:58px;
+  width:62px;
+}
+
+#mapa{
+  position:absolute;
+  top: 9%;
+  right:77%;
+  height:55px;
+  width:68px;
+}
+
+#btn_jean{
+  position:absolute;
+  top: 24%;
+  right:72%;
+  height:50px;
+  width:130px;
+}
+
+#btn_remera{
+  position:absolute;
+  top: 24%;
+  right:61%;
+  height:50px;
+  width:130px;
+}
+
+#btn_buzo{
+  position:absolute;
+  top: 24%;
+  right:50%;
+  height:50px;
+  width:130px;
+}
+
+#btn_ropinterior{
+  position:absolute;
+  top: 24%;
+  right:39%;
+  height:50px;
+  width:130px;
+}
+
+#btn_zapas{
+  position:absolute;
+  top: 24%;
+  right:28%;
+  height:50px;
+  width:130px;
+}
+
+#btn_camperas{
+  position:absolute;
+  top: 24%;
+  right:17%;
+  height:50px;
+  width:130px;
+}
+
+#btn_shorts{
+  position:absolute;
+  top: 24%;
+  right:6%;
+  height:50px;
+  width:130px;
 }

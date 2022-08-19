@@ -7,13 +7,11 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <form id="frm1" method="POST" action="publicacion.php">
+    <form method="POST" action="publicacion.php">
   	<div class="container">
-      <!--<div class="centerpub">-->
-              <h1 class="h1">Publicá tu prenda</h1>
-              
-
-              <div class="tipo_prenda">
+      <div class="centerpub">
+              <h1>Publicá tu prenda</h1>
+              <div>
                 <input list="tipo_prenda" id="lista_prendas" name="lista_prendas" placeholder="Tipo de prenda: "/>
                 <datalist id="tipo_prenda">
                   <option value="Remera"></option>
@@ -25,12 +23,10 @@
                   <option value="Zapatillas"></option>
                 </datalist>
               </div>
-             
               <div class="txt_pub">
-                  <label id="lbldesc"for="desc">Descripción: </label>
                   <input type="text" id="desc" name="desc" required>
                   <span></span>
-                  
+                  <label>Descripción</label>
               </div>
               
                 <label class="file-input" for="file">
@@ -38,12 +34,13 @@
                 </div>
                 <input type="file" id="file">
                 </label>
-              
-              <div class="botonP">             
+                           
               <input id="botonP" class="txt" type="Submit" value="Publicar">
-              </div>
           
-      <!--</div>-->
+          <div id="divt">
+           
+        </div>
+      </div>
   </div>
   </form>
   </body>
