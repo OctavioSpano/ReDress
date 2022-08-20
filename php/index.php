@@ -32,9 +32,7 @@
   <a href="">
   <img id="mapa"src="../imagenes/Mapa.png">
 </a>
-  <a href="">
-  <img id="btn_jean"src="../imagenes/BotonJean.png">
-</a>
+
 </a>
   <a href="">
   <img id="btn_remera"src="../imagenes/Boton Remera.png">
@@ -46,7 +44,7 @@
   <img id="btn_ropinterior"src="../imagenes/Boton ropa interior.png">
 </a>
   <a href="">
-  <img id="btn_zapas"src="../imagenes/Botonzapatillas.png">
+  <img id="btn_zapas"src="../imagenes/Boton zapatillas.png">
 </a>
   <a href="">
   <img id="btn_camperas"src="../imagenes/Boton camperas.png">
@@ -54,7 +52,13 @@
   <a href="">
   <img id="btn_shorts"src="../imagenes/Boton camperas (1).png">
 </a>
-
+</a>
+  <a href="">
+  <img id="btn_pantalones"src="../imagenes/Boton Pantalones.png">
+</a>
+  <a href="">
+  <img id="rectangulo"src="../imagenes/Rectangulo.png">
+</a>
 
 
 

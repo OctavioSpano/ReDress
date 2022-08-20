@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <a href="index.php" >
+    <img id="flechaatras" src="../imagenes/flechaatras.png"  >
+    </a>
     <form id="frm1" method="POST" action="publicacion.php">
   	<div class="container">
       <!--<div class="centerpub">-->

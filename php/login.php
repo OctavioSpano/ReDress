@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <a href="index.php" >
+    <img id="logofoto" src="../imagenes/Logo.png"  >
+    </a>
     <div class="container">
       <div class="center">
           <h1>Iniciar Sesión</h1>
