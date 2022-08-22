@@ -1,3 +1,4 @@
+<?session_start();?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,8 +9,16 @@
   </head>
   <body>
   	<div id="login-reg" class="acceso-usuario">
-  		<a href="registrar.php">Registrarte |</a>
-  		<a href="login.php"> Iniciar Sesión</a>
+      <?
+
+        if (isset($_SESSION['nom'])){
+          echo $_SESSION['nom'];
+          echo "<br><a href='LogOut.php'>Cerrar Sesión</a>";
+        }else{
+          echo '<a href="registrar.php">Registrarte |</a><a href="login.php"> Iniciar Sesión</a>';
+        }
+      ?>
+  		
     </div>
     <form id="searchbtn" action="">
       <img id="lupita" src="../imagenes/Imagen Lupa.png">
@@ -56,11 +65,11 @@
   <a href="">
   <img id="btn_pantalones"src="../imagenes/Boton Pantalones.png">
 </a>
-  <a href="">
+  
   <img id="rectangulo"src="../imagenes/Rectangulo.png">
-</a>
 
 
 
 </body>
 </html>
+
