@@ -41,9 +41,15 @@
                 <input type="file" id="file">
                 </label>
               
+              <label class="lblUsado">Usado: </label>
+              <input type = "checkbox" name = "chbxUsado" class = "chbxUsado">
+
               <div class="botonP">             
-              <input id="botonP" class="txt" type="Submit" value="Publicar">
+              <input id="botonP" name="botonP" class="txt" type="Submit" value="Publicar">
               </div>
+
+              
+
           
       <!--</div>-->
   </div>

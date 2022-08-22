@@ -175,6 +175,18 @@ input[type="Submit"]:hover{
   font-weight: bolder;
 }
 
+[name="botonP"]{
+  width: 30%;
+  height: 50px;
+  top: 60%;
+  border: 1px solid;
+  font-family: Compote;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .centerpub{
   position: absolute;
   top: 50%;
@@ -265,19 +277,33 @@ input[type="Submit"]:hover{
   position: absolute;
  }
 
-.tipo_prenda{
-  /*width: 100%;
-  padding: 0 5px;
-  height: 40px;*/
+[name='prenda']{
+  width: 15%;
+  height: 7%;
   position: absolute;
   left: 15%;
+  top: 15%;
   font-size: 23px;
   border: none;
-  background-color: none;
-  
+  background: none;
   font-family: 'Compote', black;
-
 }
+
+.chbxUsado{
+  position: absolute;
+  top: 40%;
+  left: 22%;
+  width: 3%;
+  height: 3%;
+}
+
+.lblUsado{
+  position: absolute;
+  top: 40%;
+  left: 15.5%;
+  font-size: 23px;
+}
+
 
 .barrabusqueda{
   width: 45%;
@@ -435,3 +461,4 @@ display: none;
   width:92%;
   left: 4%;
 }
+
