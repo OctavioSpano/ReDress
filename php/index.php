@@ -34,14 +34,13 @@
   <a href="">
     <img id="corazon"src="../imagenes/Corazon.png">
   </a>  
-  <a href="">
+<a href="">
   <img id="campana"src="../imagenes/Campanita.png">
 </a>
 </a>  
   <a href="">
   <img id="mapa"src="../imagenes/Mapa.png">
 </a>
-
 </a>
   <a href="">
   <img id="btn_remera"src="../imagenes/Boton Remera.png">
@@ -67,8 +66,6 @@
 </a>
   
   <img id="rectangulo"src="../imagenes/Rectangulo.png">
-
-
 
 </body>
 </html>

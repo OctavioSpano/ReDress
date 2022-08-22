@@ -17,16 +17,15 @@
               
 
               <div class="tipo_prenda">
-                <input list="tipo_prenda" id="lista_prendas" name="lista_prendas" placeholder="Tipo de prenda: "/>
-                <datalist id="tipo_prenda">
-                  <option value="Remera"></option>
-                  <option value="Pantalon"></option>
-                  <option value="Buzo/Hoodie"></option>
-                  <option value="Campera"></option>
-                  <option value="Short/Bermuda"></option>
-                  <option value="Ropa Interior"></option>
-                  <option value="Zapatillas"></option>
-                </datalist>
+                <select name="prenda">
+                  <option value="0">Pantalones</option>
+                  <option value="1">Remeras</option>
+                  <option value="2">Hoodies</option>
+                  <option value="3">Ropa interior</option>
+                  <option value="4">Zapatillas</option>
+                  <option value="5">Camperas</option>
+                  <option value="6">Short/Bermuda</option>
+              </select>
               </div>
              
               <div class="txt_pub">

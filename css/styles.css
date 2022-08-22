@@ -107,6 +107,7 @@ form .txt_field{
 input[type="Submit"]{
   width: 30%;
   height: 50px;
+  top: 60%;
   border: 1px solid;
   font-family: Compote;
   border-radius: 25px;
@@ -264,7 +265,7 @@ input[type="Submit"]:hover{
   position: absolute;
  }
 
-#lista_prendas{
+.tipo_prenda{
   /*width: 100%;
   padding: 0 5px;
   height: 40px;*/
@@ -272,8 +273,8 @@ input[type="Submit"]:hover{
   left: 15%;
   font-size: 23px;
   border: none;
-  background: none;
-  outline: none;
+  background-color: none;
+  
   font-family: 'Compote', black;
 
 }
@@ -296,7 +297,7 @@ input[type="Submit"]:hover{
 display: none;
 }
 
-#lista_prendas::placeholder {
+.tipo_prendas::placeholder {
   color: black;
 }
 .file-input { 
