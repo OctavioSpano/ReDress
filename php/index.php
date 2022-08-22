@@ -8,8 +8,16 @@
   </head>
   <body>
   	<div id="login-reg" class="acceso-usuario">
-  		<a href="registrar.php">Registrarte |</a>
-  		<a href="login.php"> Iniciar Sesión</a>
+  		 <?
+
+        if (isset($_SESSION['nom'])){
+          echo $_SESSION['nom'];
+          echo "<br><a href='LogOut.php'>Cerrar Sesión</a>";
+        }else{
+          echo '<a href="registrar.php">Registrarte |</a><a href="login.php"> Iniciar Sesión</a>';
+        }
+      ?>
+
     </div>
     <form id="searchbtn" action="">
       <img id="lupita" src="../imagenes/Imagen Lupa.png">
