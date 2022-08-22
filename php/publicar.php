@@ -30,7 +30,7 @@
               </div>
              
               <div class="txt_pub">
-                  <label id="lbldesc"for="desc">Descripción: </label>
+                  <label for="desc">Descripción: </label>
                   <input type="text" id="desc" name="desc" required>
                   <span></span>
                   

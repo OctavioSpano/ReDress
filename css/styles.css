@@ -211,11 +211,12 @@ input[type="Submit"]:hover{
 
 }
 
-.txt_pub #desc{
-  width: 25%;
+.txt_pub input{
+  width: 30%;
   padding: 0 5px;
   height: 20%;
   top: 50%;
+  left: 30%;
   font-size: 23px;
   border: none;
   background: none;
@@ -223,10 +224,10 @@ input[type="Submit"]:hover{
   outline: none;
 }
 
-.txt_pub #lbldesc{
+.txt_pub label {
   position: absolute;
-  top: 25%;
-  left: 5px;
+  top: 30%;
+  left: 2%;
   color: black;
   transform: translateY(-50%);
   font-size: 23px;
@@ -244,8 +245,8 @@ input[type="Submit"]:hover{
   transition: .5s;
 }
 
-.txt_pub #desc:focus ~ #lbldesc,
-.txt_pub #desc:valid ~ #lbldesc{
+.txt_pub input:focus ~ label,
+.txt_pub input:valid ~ label{
   top: -5px;
   color: #2691d9;
 }
