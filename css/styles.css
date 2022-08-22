@@ -279,7 +279,7 @@ input[type="Submit"]:hover{
 
 .barrabusqueda{
   width: 45%;
-  height: 5%;
+  height: 6%;
   border: 1px solid;
   position: absolute;
   font-family: Compote;
@@ -338,10 +338,10 @@ display: none;
 
 #lupita{
   position: absolute;
-  top: 11%;
+  top: 11.5%;
   left: 29.5%;
-  height: 4.5%;
-  width: 2%;
+  height: 5%;
+  width: 2.5%;
   z-index: 2;
 }
 
@@ -365,56 +365,56 @@ display: none;
   position:absolute;
   top: 24%;
   right:72%;
-  height:50px;
-  width:130px;
+  height:58px;
+  width:140px;
 }
 
 #btn_remera{
   position:absolute;
   top: 24%;
   right:61%;
-  height:50px;
-  width:130px;
+  height:58px;
+  width:140px;
 }
 
 #btn_buzo{
   position:absolute;
   top: 24%;
   right:50%;
-  height:50px;
-  width:130px;
+  height:58px;
+  width:140px;
 }
 
 #btn_ropinterior{
   position:absolute;
   top: 24%;
   right:39%;
-  height:50px;
-  width:130px;
+  height:58px;
+  width:140px;
 }
 
 #btn_zapas{
   position:absolute;
   top: 24%;
   right:28%;
-  height:50px;
-  width:130px;
+  height:58px;
+  width:140px;
 }
 
 #btn_camperas{
   position:absolute;
   top: 24%;
   right:17%;
-  height:50px;
-  width:130px;
+  height:58px;
+  width:140px;
 }
 
 #btn_shorts{
   position:absolute;
   top: 24%;
   right:6%;
-  height:50px;
-  width:130px;
+  height:58px;
+  width:140px;
 }
 
 #flechaatras{
@@ -430,6 +430,6 @@ display: none;
   top: 35%;
   right:50%;
   height:50%;
-  width:90%;
-  left: 5%;
+  width:92%;
+  left: 4%;
 }

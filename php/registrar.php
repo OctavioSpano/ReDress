@@ -9,7 +9,7 @@
   </head>
   <body>
     <a href="index.php" >
-    <img id="logofoto" src="../imagenes/Logo.png"  >
+    <img id="flechaatras" src="../imagenes/flechaatras.png"  >
     </a>
     <div class="container">
       <div class="center">

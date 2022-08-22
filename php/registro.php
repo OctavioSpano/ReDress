@@ -17,7 +17,7 @@ if ($confcontra == $contra){
   if($resultado)
   {
 	echo"<script>alert('Bienvenido! Se ha registrado correctamente!');
-	location.href ='index.php'; </script>";
+	location.href ='login.php'; </script>";
   }
 	else{
 		echo"<script>alert('Ha ocurrido un error, prueba nuevamente...');
