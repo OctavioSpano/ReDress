@@ -5,8 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <script src="../js/redress.js" type="text/javascript"></script>   
-
   </head>
   <body>
     <a href="index.php" >
@@ -17,6 +15,7 @@
       <!--<div class="centerpub">-->
               <h1 class="h1">Publicá tu prenda</h1>
               <div class="tipo_prenda">
+                <label class="lblPrendas">Tipo de prenda: </label>
                 <select name="prenda">
                   <option value="Pantalones">Pantalones</option>
                   <option value="Remeras">Remeras</option>
@@ -33,26 +32,26 @@
                   <input type="text" id="desc" name="desc" required>
                   <span></span>
               </div>
-                <label class="file-input" id="labelFI" for="file">
+                <label class="file-input" for="file">
                 <div class="drop-zone"> <p><b>Select a file</b> or drop it here!</p>
                 </div>
                 <input type="file" id="file">
                 </label>
-
               <label class="lblUsado">Usado: </label>
               <input type = "checkbox" name = "chbxUsado" class = "chbxUsado">
               <div class="botonP">             
               <input id="botonP" name="botonP" class="txt" type="Submit" value="Publicar">
               </div>
-              <label class="lblTalle">Talle: </label>
+              
               <div class="lista_talle">
+              <label class="lblTalle">Talle: </label>
                 <select name="talles">
                   <option value="XS">XS</option>
                   <option value="S">S</option>
                   <option value="M">M</option>
-                  <option value="3">L</option>
-                  <option value="4">XL</option>
-                  <option value="5">XXL</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
               </select>
               </div>
 
