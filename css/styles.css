@@ -103,8 +103,8 @@ form .txt_field{
 .pass:hover{
   text-decoration: underline;
 }
-/*
-input[type="Submit"]{
+
+#botonR, #botonL{
   width: 30%;
   height: 50px;
   top: 60%;
@@ -115,9 +115,9 @@ input[type="Submit"]{
   font-weight: 700;
   cursor: pointer;
 
-}*/
+}
 
-input[type="Submit"]:hover{
+#botonR, #botonL:hover{
   background: #2691d9;
   color: #e9f4fb;
   transition: .5s;
@@ -175,17 +175,24 @@ input[type="Submit"]:hover{
   font-weight: bolder;
 }
 
- [name="botonP"]{
+  #botonP{
   width: 20%;
   height: 50px;
-  top: 70%;
-  left: 20%;
+  position: absolute;
+  top: 80%;
+  left: 40%;
   border: 1px solid;
   font-family: Compote;
   border-radius: 25px;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
+}
+
+#botonP:hover{
+  background: #2691d9;
+  color: #e9f4fb;
+  transition: .5s;
 }
 
 .centerpub{
@@ -325,16 +332,14 @@ display: none;
 }
 
 .file-input { 
-
-  display: grid;
-  grid-template-areas: "stack"; 
-  width: 20%; /*360px;*/ 
-  height: 300px; 
-  background-color: #eeeeee; 
-  border-radius: 8px; 
-  text-align: center;
-  position: relative;
-  left: 50%;
+display: grid;
+grid-template-areas: "stack";
+width: 360px; 
+height: 300px;
+left: 60%; 
+position: absolute;
+background-color: #eeeeee; 
+border-radius: 8px; 
 }
 
 .file-input > * {

@@ -1,17 +1,18 @@
-const label = document.querySelector('label');
-function onEnter() { label.classList.add('active');
+const labelFI = document.querySelector('labelFI');
+function onEnter() { labelFI.classList.add('active');
 }
-function onLeave() { label.classList.remove('active'); }
-label.addEventListener('dragenter', onEnter);
-label.addEventListener('drop', onLeave);
-label.addEventListener('dragend', onLeave); label.addEventListener('dragleave', onLeave);
-label.addEventListener('dragexit', onLeave);
+function onLeave() { labelFI.classList.remove('active'); }
+labelFI.addEventListener('dragenter', onEnter);
+labelFI.addEventListener('drop', onLeave);
+labelFI.addEventListener('dragleave', onLeave);
+labelFI.addEventListener('dragexit', onLeave);
+labelFI.addEventListener('dragend', onLeave); 
 const input = document.querySelector('input'); 
 input.addEventListener('change', event =>{
  if (input.files.length > 0) 
- { // A file was selected
+ {
+  // A file was selected
  }
-
 })
 
 

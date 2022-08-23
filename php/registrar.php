@@ -45,7 +45,7 @@
                   <span></span>
                   <label>Confirma Contrase&ntilde;a</label>
               </div>
-              <input id="boton" type="Submit" value="Aceptar">
+              <input id="botonR" type="Submit" value="Aceptar">
               <div class="signup_link">
                   Tenés una cuenta? <a href="login.php">Inicia sesión aquí</a>
               </div>

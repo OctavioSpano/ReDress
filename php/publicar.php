@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/redress.js" type="text/javascript"></script>   
+
   </head>
   <body>
     <a href="index.php" >
@@ -16,13 +18,13 @@
               <h1 class="h1">Publicá tu prenda</h1>
               <div class="tipo_prenda">
                 <select name="prenda">
-                  <option value="0">Pantalones</option>
-                  <option value="1">Remeras</option>
-                  <option value="2">Hoodies</option>
-                  <option value="3">Ropa interior</option>
-                  <option value="4">Zapatillas</option>
-                  <option value="5">Camperas</option>
-                  <option value="6">Short/Bermuda</option>
+                  <option value="Pantalones">Pantalones</option>
+                  <option value="Remeras">Remeras</option>
+                  <option value="Hoodies">Hoodies</option>
+                  <option value="Ropa interior">Ropa interior</option>
+                  <option value="Zapatillas">Zapatillas</option>
+                  <option value="Camperas">Camperas</option>
+                  <option value="Short/Bermuda">Short/Bermuda</option>
               </select>
               </div>
              
@@ -31,11 +33,12 @@
                   <input type="text" id="desc" name="desc" required>
                   <span></span>
               </div>
-                <label class="file-input" for="file">
+                <label class="file-input" id="labelFI" for="file">
                 <div class="drop-zone"> <p><b>Select a file</b> or drop it here!</p>
                 </div>
                 <input type="file" id="file">
                 </label>
+
               <label class="lblUsado">Usado: </label>
               <input type = "checkbox" name = "chbxUsado" class = "chbxUsado">
               <div class="botonP">             
@@ -44,9 +47,9 @@
               <label class="lblTalle">Talle: </label>
               <div class="lista_talle">
                 <select name="talles">
-                  <option value="0">XS</option>
-                  <option value="1">S</option>
-                  <option value="2">M</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
                   <option value="3">L</option>
                   <option value="4">XL</option>
                   <option value="5">XXL</option>
