@@ -1,3 +1,4 @@
+<?session_start();?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +10,6 @@
   <body>
   	<div id="login-reg" class="acceso-usuario">
   		 <?
-
         if (isset($_SESSION['nom'])){
           echo $_SESSION['nom'];
           echo "<br><a href='LogOut.php'>Cerrar Sesión</a>";
