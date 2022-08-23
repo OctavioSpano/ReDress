@@ -103,7 +103,7 @@ form .txt_field{
 .pass:hover{
   text-decoration: underline;
 }
-
+/*
 input[type="Submit"]{
   width: 30%;
   height: 50px;
@@ -115,7 +115,7 @@ input[type="Submit"]{
   font-weight: 700;
   cursor: pointer;
 
-}
+}*/
 
 input[type="Submit"]:hover{
   background: #2691d9;
@@ -175,10 +175,11 @@ input[type="Submit"]:hover{
   font-weight: bolder;
 }
 
-[name="botonP"]{
-  width: 30%;
+ [name="botonP"]{
+  width: 20%;
   height: 50px;
-  top: 60%;
+  top: 70%;
+  left: 20%;
   border: 1px solid;
   font-family: Compote;
   border-radius: 25px;
@@ -323,9 +324,6 @@ input[type="Submit"]:hover{
 display: none;
 }
 
-.tipo_prendas::placeholder {
-  color: black;
-}
 .file-input { 
 
   display: grid;
@@ -462,3 +460,21 @@ display: none;
   left: 4%;
 }
 
+[name="talles"]{
+  width: 15%;
+  height: 7%;
+  position: absolute;
+  left: 15.5%;
+  top: 53.7%;
+  font-size: 23px;
+  border: none;
+  background: none;
+  font-family: 'Compote', black;
+}
+
+.lblTalle{
+  position: absolute;
+  top: 50%;
+  left: 15.5%;
+  font-size: 23px;
+}
