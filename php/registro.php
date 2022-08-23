@@ -11,13 +11,20 @@
 if ($confcontra == $contra){
 	$consulta= "INSERT INTO usuarios (Mail,Contrasenia,Nombre,Apellido,Telefono) VALUES ('$mail','$contra','$nombre','$apellido','$tel')"; 
 	$resultado=mysqli_query($con, $consulta);
+	$lastid = mysqli_insert_id($con); 
 }
  
 
   if($resultado)
   {
-	echo"<script>alert('Bienvenido! Se ha registrado correctamente!');
-	location.href ='login.php'; </script>";
+  	$consulta2= "SELECT * FROM usuarios where IDUsuario ='$lastid'";
+ 	$resultado2=mysqli_query($con, $consulta2);
+ 	session_start();
+	$res2=$resultado2->fetch_array();
+ 	$_SESSION['idu']=$res2['IDUsuario'];
+ 	$_SESSION['nom']=$res2['Nombre']." ".$res2['Apellido'];
+ 	echo"<script>alert('Bienvenido! Se ha registrado correctamente!')</script>";
+	header("location:index.php");
   }
 	else{
 		echo"<script>alert('Ha ocurrido un error, prueba nuevamente...');
