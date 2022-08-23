@@ -14,8 +14,6 @@
   	<div class="container">
       <!--<div class="centerpub">-->
               <h1 class="h1">Publicá tu prenda</h1>
-              
-
               <div class="tipo_prenda">
                 <select name="prenda">
                   <option value="0">Pantalones</option>
@@ -32,20 +30,27 @@
                   <label for="desc">Descripción: </label>
                   <input type="text" id="desc" name="desc" required>
                   <span></span>
-                  
               </div>
-              
                 <label class="file-input" for="file">
                 <div class="drop-zone"> <p><b>Select a file</b> or drop it here!</p>
                 </div>
                 <input type="file" id="file">
                 </label>
-              
               <label class="lblUsado">Usado: </label>
               <input type = "checkbox" name = "chbxUsado" class = "chbxUsado">
-
               <div class="botonP">             
               <input id="botonP" name="botonP" class="txt" type="Submit" value="Publicar">
+              </div>
+              <label class="lblTalle">Talle: </label>
+              <div class="lista_talle">
+                <select name="talles">
+                  <option value="0">XS</option>
+                  <option value="1">S</option>
+                  <option value="2">M</option>
+                  <option value="3">L</option>
+                  <option value="4">XL</option>
+                  <option value="5">XXL</option>
+              </select>
               </div>
 
               
