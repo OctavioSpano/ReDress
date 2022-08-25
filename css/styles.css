@@ -117,7 +117,7 @@ form .txt_field{
 
 }
 
-#botonR, #botonL:hover{
+#botonR:hover{
   background: #2691d9;
   color: #e9f4fb;
   transition: .5s;
@@ -217,65 +217,6 @@ form .txt_field{
   box-sizing: border-box;
 }
 
-.txt_pub{
-  position: absolute;
-  border-bottom: 2px solid #adadad;
-  margin: 30px 0;
-  position: absolute;
-  left: 15%;
-  top: 50%;
-  font-size: 23px;
-  border: none;
-  background: none;
-  outline: none;
-  font-family: 'Compote'
-
-}
-
-.txt_pub input{
-  width: 30%;
-
-  height: 20%;
-  top: 50%;
-  left: 30%;
-  font-size: 23px;
-  border: none;
-  background: none;
-  font-family: 'Compote';
-  outline: none;
-}
-
-.txt_pub label {
-  position: absolute;
-  top: 30%;
-  left: 2%;
-  color: black;
-  transform: translateY(-50%);
-  font-size: 23px;
-  pointer-events: none;
-}
-
-.txt_pub span::before{
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: 0px;
-  width: 0px;
-  height: 2px;
-  background: #2691d9;
-  transition: .5s;
-}
-
-.txt_pub input:focus ~ label,
-.txt_pub input:valid ~ label{
-  top: -5px;
-  color: #2691d9;
-}
-
-.txt_pub #desc:focus ~ span::before,
-.txt_pub #desc:Valid ~ span::before{
-  width: 100%;
-}
 .bad{
   font-size:20px;
   font-family: 'Compote';
@@ -290,7 +231,7 @@ form .txt_field{
   height: 7%;
   position: absolute;
   left: 15%;
-  top: 19%;
+  top: 19.5%;
   font-size: 23px;
   border: none;
   background: none;
@@ -299,17 +240,23 @@ form .txt_field{
 
 .chbxUsado{
   position: absolute;
-  top: 40%;
-  left: 22%;
+  top: 45%;
+  left: 27.5%;
   width: 3%;
   height: 3%;
 }
 
 .lblUsado{
   position: absolute;
-  top: 40%;
-  left: 15.5%;
+  height: 5%;
+  width: 20%;
+  top: 45%;
+  left: 15%;
   font-size: 23px;
+  border-radius: 7px;
+  text-align: left;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 254, 254, 0.38);
 }
 
 
@@ -470,7 +417,7 @@ border-radius: 8px;
   height: 7%;
   position: absolute;
   left: 15%;
-  top: 31.7%;
+  top: 34%;
   font-size: 23px;
   border: none;
   background: none;
@@ -481,7 +428,7 @@ border-radius: 8px;
   position: absolute;
   width: 20%;
   height: 10%;
-  top: 28%;
+  top: 30%;
   left: 15%;
   font-size: 23px;
   background-color: white;
@@ -503,4 +450,32 @@ border-radius: 8px;
   border-radius: 7px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: rgba(255, 254, 254, 0.38);
+}
+
+.lbl_desc{
+  position: absolute;
+  width: 20%;
+  height: 15%;
+  top: 55%;
+  left: 15%;
+  font-family: 'Compote';
+  font-size: 23px;
+  text-align: left;
+  border-radius: 7px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 254, 254, 0.38);
+}
+
+.lbl_desc textarea{
+  top: 29%;
+  width: 98%;
+  height: 35%;
+  left: 1%;
+  font-family: 'Arial';
+  font-size: 18px;
+  background-color: black;
+  background: none;
+  text-decoration-line: overline;
+  max-width: 95%;
+  max-height: 67%;
 }

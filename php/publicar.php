@@ -27,9 +27,9 @@
               </select>
               </div>
              
-              <div class="txt_pub">
+              <div class="lbl_desc">
                   <label for="desc">Descripción: </label>
-                  <input type="text" id="desc" name="desc" required>
+                 <textarea class="lbl_desc"name="desc" rows="5" resize="none"></textarea>
                   <span></span>
               </div>
                 <label class="file-input" for="file">
