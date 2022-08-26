@@ -11,7 +11,7 @@
 if ($confcontra == $contra){
 	$consulta= "INSERT INTO usuarios (Mail,Contrasenia,Nombre,Apellido,Telefono) VALUES ('$mail','$contra','$nombre','$apellido','$tel')"; 
 	$resultado=mysqli_query($con, $consulta);
-	$lastid = mysqli_insert_id($con); 
+	$lastid = mysqli_insert_id($con); 			 
 }
  
 
