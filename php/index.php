@@ -30,15 +30,15 @@
   <a href="index.php" >
   <img id="logofoto" src="../imagenes/Logo.png"  >
   </a>
-  <a href="">
-    <img id="corazon"src="../imagenes/Corazon.png">
+  <a href="pendientes.php">
+    <img id="pendientes"src="../imagenes/RelojArena.png">
   </a>  
-  <a href="">
+  <a href="notificaciones.php">
   <img id="campana"src="../imagenes/Campanita.png">
 </a>
 </a>  
-  <a href="">
-  <img id="mapa"src="../imagenes/Mapa.png">
+  <a href="localizacion.php">
+  <img id="btn_mapa"src="../imagenes/Mapa.png">
 </a>
 
 </a>
