@@ -6,6 +6,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
+     <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
+     <script src="../js/redress.js" type="text/javascript"></script>  
   </head>
   <body>
   	<div id="login-reg" class="acceso-usuario">
@@ -21,7 +23,7 @@
     </div>
     <form id="searchbtn" action="">
       <img id="lupita" src="../imagenes/Imagen Lupa.png">
-      <input type="search" name="barrabusqueda" placeholder="¿Qué estabas buscando?" class="barrabusqueda">
+      <input type="text" id= "barrabusqueda"name="barrabusqueda" placeholder="¿Qué estabas buscando?" class="barrabusqueda">
       
     </form>
     <div id="publicarbtn" >

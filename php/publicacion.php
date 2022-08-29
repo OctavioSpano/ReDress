@@ -3,6 +3,7 @@ session_start();
 $tipoprenda = filter_input(INPUT_POST, 'prenda', FILTER_SANITIZE_STRING);
 $talles = filter_input(INPUT_POST, 'talles', FILTER_SANITIZE_STRING);
 $desc = $_POST ['desc'];
+$color = $_POST['color'];
 if (isset($_POST['chbxUsado'])){
   $usado = "S";
 }  
@@ -21,20 +22,16 @@ if (isset($_POST['botonP'])) {
     $filename = $_FILES["uploadfile"]["name"];
     $ext=explode(".", $filename);
     $tempname = $_FILES["uploadfile"]["tmp_name"];
-    //$folder = "./image/" . $idprenda.".".$ext(1);
     $folder = "../image/".$lastid.".".$ext[1];
-    //echo $filename;
-    //echo $folder;
     // Get all the submitted data from the form
     $sql = "UPDATE prendas set RutaFoto='".$folder."' where IDPublicacion=".$lastid."";
-    //echo $sql;
- 
+    
     // Execute query
     mysqli_query($con, $sql);
 
     // Now let's move the uploaded image into the folder: image
     if (move_uploaded_file($tempname, $folder)) {
-        echo "<h3>  Image uploaded successfully!</h3>";
+        header("location:index.php");
     } else {
         echo "<h3>  Failed to upload image!</h3>";
     }
