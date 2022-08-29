@@ -21,7 +21,7 @@ if (isset($_POST['botonP'])) {
  
     $filename = $_FILES["uploadfile"]["name"];
     $ext=explode(".", $filename);
-    $tempname = $_FILES["uploadfile"]["tmp_name"];
+        $tempname = $_FILES["uploadfile"]["tmp_name"];
     $folder = "../image/".$lastid.".".$ext[1];
     // Get all the submitted data from the form
     $sql = "UPDATE prendas set RutaFoto='".$folder."' where IDPublicacion=".$lastid."";

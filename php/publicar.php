@@ -12,7 +12,7 @@
     <a href="index.php" >
     <img id="flechaatras" src="../imagenes/flechaatras.png"  >
     </a>
-    <form id="frm1" method="POST" action="publicacion.php">
+    <form id="frm1" method="POST" action="publicacion.php" enctype="multipart/form-data">
   	<div class="container">
       <!--<div class="centerpub">-->
               <h1 class="h1">Publicá tu prenda</h1>
