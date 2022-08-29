@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,12 +6,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
+     <script src="../js/redress.js" type="text/javascript"></script>   
+     
   </head>
   <body>
     <a href="index.php" >
     <img id="flechaatras" src="../imagenes/flechaatras.png"  >
     </a>
-    <form id="frm1" method="POST" action="publicacion.php">
+    <form id="frm1" method="POST" action="publicacion.php" enctype="multipart/form-data">
   	<div class="container">
       <!--<div class="centerpub">-->
               <h1 class="h1">Publicá tu prenda</h1>
@@ -32,11 +36,12 @@
                  <textarea class="lbl_desc"name="desc" rows="5" resize="none"></textarea>
                   <span></span>
               </div>
-                <label class="file-input" for="file">
-                <div class="drop-zone"> <p><b>Select a file</b> or drop it here!</p>
-                </div>
-                <input type="file" id="file">
-                </label>
+
+            <div class="form-group">
+                <input class="file-input" type="file" name="uploadfile" id="ufile" value="" require accept="image/*" />
+                <div id="prew"></div>
+            </div>
+            
               <label class="lblUsado">Usado: </label>
               <input type = "checkbox" name = "chbxUsado" class = "chbxUsado">
               <div class="botonP">             
@@ -63,3 +68,4 @@
   </form>
   </body>
 </html>
+
