@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,14 +6,13 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
     <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
-     <script src="../js/redress.js" type="text/javascript"></script>   
-     
+    <script src="../js/redress.js" type="text/javascript"></script>
   </head>
   <body>
     <a href="index.php" >
     <img id="flechaatras" src="../imagenes/flechaatras.png"  >
     </a>
-    <form id="frm1" method="POST" action="publicacion.php" enctype="multipart/form-data">
+    <form id="frm1" method="POST" action="publicacion.php">
   	<div class="container">
       <!--<div class="centerpub">-->
               <h1 class="h1">Publicá tu prenda</h1>
@@ -33,15 +31,14 @@
              
               <div class="lbl_desc">
                   <label for="desc">Descripción: </label>
-                 <textarea class="lbl_desc"name="desc" rows="5" resize="none"></textarea>
+                 <textarea class="lbl_desc"name="desc" rows="5" resize></textarea>
                   <span></span>
               </div>
-
-            <div class="form-group">
+               <div class="form-group">
                 <input class="file-input" type="file" name="uploadfile" id="ufile" value="" require accept="image/*" />
                 <div id="prew"></div>
-            </div>
-            
+              </div>
+
               <label class="lblUsado">Usado: </label>
               <input type = "checkbox" name = "chbxUsado" class = "chbxUsado">
               <div class="botonP">             
@@ -59,6 +56,8 @@
                   <option value="XXL">XXL</option>
               </select>
               </div>
+              <label class="lblColor">Color: </label>
+              <input type="text" name="color">
 
               
 
@@ -68,4 +67,3 @@
   </form>
   </body>
 </html>
-
