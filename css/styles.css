@@ -489,5 +489,21 @@ border-radius: 8px;
 }
 
 .localesParaTi{
+  position: absolute;
   font-size: 23px;
+  top: 21%;
+  left: 2%;
+  border-radius: 7px;
+  background: rgba(255, 254, 254, 0.38);
+}
+
+.ubilocalesParaTi{
+  position: absolute;
+  font-size: 23px;
+  top: 25%;
+  left: 2%;
+  border-radius: 7px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 254, 254, 0.38);
+}
 }
