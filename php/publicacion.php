@@ -22,12 +22,12 @@ if (isset($_POST['botonP'])) {
     $ext=explode(".", $filename);
     $tempname = $_FILES["uploadfile"]["tmp_name"];
     //$folder = "./image/" . $idprenda.".".$ext(1);
-    $folder = "./image/".$lastid.".".$ext[1];
-    
- 
+    $folder = "../image/".$lastid.".".$ext[1];
+    //echo $filename;
+    //echo $folder;
     // Get all the submitted data from the form
     $sql = "UPDATE prendas set RutaFoto='".$folder."' where IDPublicacion=".$lastid."";
-    echo $sql;
+    //echo $sql;
  
     // Execute query
     mysqli_query($con, $sql);

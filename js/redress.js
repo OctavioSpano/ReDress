@@ -1,19 +1,17 @@
-const labelFI = document.querySelector('labelFI');
-function onEnter() { labelFI.classList.add('active');
+$(document).ready(function(){
+
+
+function imagePreview(fileInput) {
+    if (fileInput.files && fileInput.files[0]) {
+        var fileReader = new FileReader();
+        fileReader.onload = function (event) {
+            $('#prew').html('<img src="'+event.target.result+'" width="300" height="auto"/>');
+        };
+        fileReader.readAsDataURL(fileInput.files[0]);
+    }
 }
-function onLeave() { labelFI.classList.remove('active'); }
-labelFI.addEventListener('dragenter', onEnter);
-labelFI.addEventListener('drop', onLeave);
-labelFI.addEventListener('dragleave', onLeave);
-labelFI.addEventListener('dragexit', onLeave);
-labelFI.addEventListener('dragend', onLeave); 
-const input = document.querySelector('input'); 
-input.addEventListener('change', event =>{
- if (input.files.length > 0) 
- {
-  // A file was selected
- }
-})
 
-
-
+$("#ufile").change(function () {
+    imagePreview(this);
+});
+});
