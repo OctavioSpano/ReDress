@@ -1,14 +1,29 @@
 <?php
 
-if (isset("#btnBusqueda")){
 $con = mysqli_connect("localhost", "root", "rootroot", "redressbd");
-$buscar = $_POST['barranavegacion'];
-echo $buscar;
+$buscar = $_POST['barrabusqueda'];
+//echo $buscar;
 
-}
-/*$consulta= "SELECT * FROM prendas where TipoPrenda ='$lastid'";
-$resultado=mysqli_query($con, $consulta);
-*/
+
+$consulta= "SELECT * FROM prendas where TipoPrenda like '%".$buscar."%'";
+$res=mysqli_query($con, $consulta);
+//echo $consulta;
+
+$sal="";
+		if($res->num_rows > 0){
+			while($data = $res->fetch_assoc()){
+	        	$sal.="<label>".$data['Descripcion']."</label><BR>";		
+	        }
+	    }else{
+	        
+	    }
+    //retorno los datos en formato JSON
+    echo $sal;
+	
+	$con->close();
+
+
+
 
 
 
