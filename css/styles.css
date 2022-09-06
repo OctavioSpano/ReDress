@@ -220,7 +220,7 @@ form .txt_field{
   font-family: 'Compote';
   color: red;
   top: 53%;
-  left: 35%; 
+  left: 40%; 
   position: absolute;
  }
 
@@ -542,7 +542,7 @@ align-content: center;
   height: 10%;
   width: 10%;
 }
-
+/*
 .wrapper {
   position: absolute;
   top: 35%;
@@ -558,6 +558,7 @@ align-content: center;
   transform: scale(0.95);
   transition: box-shadow 0.5s, transform 0.5s;
 }
+
 .wrapper:hover {
   transform: scale(1);
   box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
@@ -572,7 +573,6 @@ align-content: center;
   background: url(https://image.freepik.com/free-photo/medium-shot-man-trying-futuristic-device_23-2148864992.jpg) no-repeat center center;
   background-size: 100%;
 }
-  }
 .wrapper .container .bottom {
   width: 200%;
   height: 20%;
@@ -611,7 +611,7 @@ align-content: center;
   float: right;
   width: calc(30% - 2px);
   height: 100%;
-  background: #96CEB4;
+  background: white;
   transition: background 0.5s;
   border-left: solid thin rgba(0, 0, 0, 0.1);
 }
@@ -633,7 +633,7 @@ align-content: center;
   background: #A6CDDE;
   color: white;
   float: right;
-  height: 200%;
+  height: 100%;
   overflow: hidden;
 }
 .wrapper .container .bottom .right .details {
@@ -727,5 +727,5 @@ align-content: center;
   color: white;
 }
 .wrapper .inside .contents p {
-  font-size: 13px;
+  font-size: 9px;
 }
