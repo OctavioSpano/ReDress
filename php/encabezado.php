@@ -1,5 +1,4 @@
 <?session_start();?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,7 +24,7 @@
     </div>
     <form id="searchbtn" action="buscado.php" method="POST">
       <img id="lupita" src="../imagenes/Imagen Lupa.png">
-      <input type="text" id= "barrabusqueda" name="barrabusqueda" placeholder="¿Qué estabas buscando?" class="barrabusqueda">      
+      <input type="text" id= "barrabusqueda" name="barrabusqueda" placeholder="¿Qué estabas buscando?" class="barrabusqueda">	      
     </form>
     <div id="publicarbtn" >
       <button class="btnpublicar" onclick="location.href='publicar.php'">+</button>
@@ -45,26 +44,26 @@
 </a>
 
 </a>
-  <a href="">
+  <a href="buscado.php">
   <img id="btn_remera"src="../imagenes/Boton Remera.png">
 </a>
-  <a href="">
+  <a href="buscado.php">
   <img id="btn_buzo"src="../imagenes/Boton hoodies.png">
 </a>
-  <a href="">
+  <a href="buscado.php">
   <img id="btn_ropinterior"src="../imagenes/Boton ropa interior.png">
 </a>
-  <a href="">
+  <a href="buscado.php">
   <img id="btn_zapas"src="../imagenes/Boton zapatillas.png">
 </a>
-  <a href="">
+  <a href="buscado.php">
   <img id="btn_camperas"src="../imagenes/Boton camperas.png">
 </a>
-  <a href="">
+  <a href="buscado.php">
   <img id="btn_shorts"src="../imagenes/Boton camperas (1).png">
 </a>
 </a>
-  <a href="">
+  <a href="buscado.php">
   <img id="btn_pantalones"src="../imagenes/Boton Pantalones.png">
 </a>
 

@@ -6,27 +6,28 @@ $buscar = $_POST['barrabusqueda'];
 //echo $buscar;
 
 
-/*$consulta= "SELECT * FROM prendas where TipoPrenda like '%".$buscar."%'";
+$consulta= "SELECT * FROM prendas where TipoPrenda like '%".$buscar."%'";
 $res=mysqli_query($con, $consulta);
 
 //echo $consulta;
-/*$sal="";
+$sal="";
 		if($res->num_rows > 0){
 			while($data = $res->fetch_assoc()){
+				$sal.="<div id=card>";
 	        	$sal.="<label>".$data['Descripcion']."</label><BR>";
 	        	$consulta2 = "SELECT * FROM usuarios WHERE IDUsuario = ". $data['IDUsuario']."";
 				$resultado=mysqli_query($con, $consulta2);
 				$res2=$resultado->fetch_array();
            
 	        	$sal .= "<label> Publicado por: ".$res2['Nombre']." ". $res2['Apellido']."</label><BR>";
-	        	$sal.= "<img src = ".$data['RutaFoto'].">";		
-	        	
+	        	$sal.= "<img 	src = ".$data['RutaFoto'].">";		
+	        	$sal.= "</div>";
 	        }
 	    }else{
 	        
 	    }
     //retorno los datos en formato JSON
-    echo $sal;*/
+    echo $sal;
 	
 	$con->close();
 
@@ -37,14 +38,14 @@ include ("encabezado.php")
 <a>
   <img id="rectangulo"src="../imagenes/Rectangulo.png">
 </a>
-
+<!--
 <div class="wrapper">
   <div class="container">
     <div class="top"></div>
     <div class="bottom">
       <div class="left">
         <div class="details">
-          <h1>VR Gaming</h1>
+          <h1></h1>
           <p style="font-size: 20px;">25000/-</p>
         </div>
         <div class="buy"><i class="material-icons">add_shopping_cart</i></div>
@@ -101,3 +102,4 @@ include ("encabezado.php")
 </div>
 
   <script src='../js/jquery-3.6.0.min'></script><script  src="../js/cards.js"></script>
+<!--
