@@ -19,6 +19,7 @@ $lastid = mysqli_insert_id($con);
 //guarda foto en carpeta y en la base de datos
 if (isset($_POST['botonP'])) {
  
+
     $filename = $_FILES["uploadfile"]["name"];
     $ext=explode(".", $filename);
         $tempname = $_FILES["uploadfile"]["tmp_name"];
@@ -36,5 +37,56 @@ if (isset($_POST['botonP'])) {
         echo "<h3>  Failed to upload image!</h3>";
     }
 }
+
+function resize_image($file, $max_resolution){
+
+ if(file_exists($file)){
+
+    $original_image = imagecreatefromjpeg($file);
+
+//resolution
+
+    $original_width = imagesx($original_image); 
+
+    $original_height = imagesy($original_image);
+
+//try width first
+
+    $ratio = $max_resolution / $original_width; 
+
+    $new_width= $max_resolution;
+
+    $new_height = $original_height * $ratio;
+
+    //if that didn't work
+
+    if ($new_height > $max_resolution) { 
+
+    $ratio= $max_resolution / $original_height;
+
+    $new_height = $max_resolution;
+    $new_width = $original_width * $ratio;
+
+    }
+
+    if($original_image){
+
+    $new_image = imagecreatetruecolor($new_width, $new_height);
+
+    Imagecopyresampled($new_image,$original_image,0,0,0,0,$new_width,$new_height, $original_width, $original_height)
+
+    Imagejpeg($new_image,$file,90);
+
+    }
+}
+
+if(isset($_FILES['uploadfile'])){
+
+move_uploaded_file($_FILES['image']['tmp_name'],$_FILES['image']['name']);
+
+$file = $_FILES['image']['name'];
+
+resize_image($file, "200");
+
 
 ?>

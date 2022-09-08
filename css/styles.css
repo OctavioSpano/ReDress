@@ -538,6 +538,8 @@ align-content: center;
 #prew{
   position: absolute;
   top: 21%;
+  align-content: center;
+  max-height: 50px;
   left: 62%;
   height: 10%;
   width: 10%;

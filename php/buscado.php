@@ -13,20 +13,16 @@ $res=mysqli_query($con, $consulta);
 $sal="";
 		if($res->num_rows > 0){
 			while($data = $res->fetch_assoc()){
-				$sal.="<div id=card>";
-	        	$sal.="<label>".$data['Descripcion']."</label><BR>";
+			     	$sal.="<label>".$data['Descripcion']."</label><BR>";
 	        	$consulta2 = "SELECT * FROM usuarios WHERE IDUsuario = ". $data['IDUsuario']."";
 				$resultado=mysqli_query($con, $consulta2);
 				$res2=$resultado->fetch_array();
            
 	        	$sal .= "<label> Publicado por: ".$res2['Nombre']." ". $res2['Apellido']."</label><BR>";
 	        	$sal.= "<img 	src = ".$data['RutaFoto'].">";		
-	        	$sal.= "</div>";
+	        	
 	        }
-	    }else{
-	        
 	    }
-    //retorno los datos en formato JSON
     echo $sal;
 	
 	$con->close();
