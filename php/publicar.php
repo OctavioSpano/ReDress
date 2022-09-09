@@ -5,7 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <!--<link rel="stylesheet" href="../css/materialize.css" />-->
     <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
+    <!--<script src="../js/materialize.js" type="text/javascript"></script>-->
     <script src="../js/redress.js" type="text/javascript"></script>
   </head>
   <body>
@@ -34,7 +36,7 @@
                  <textarea class="lbl_desc"name="desc" rows="5" resize></textarea>
                   <span></span>
               </div>
-               <div class="form-group">
+              <div class="form-group">
                 <input class="file-input" type="file" name="uploadfile" id="ufile" value="" require accept="image/*" />
                 <div id="prew"></div>
               </div>

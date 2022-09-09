@@ -38,7 +38,7 @@ if (isset($_POST['botonP'])) {
     }
 }
 
-function resize_image($file, $max_resolution){
+/*function resize_image($file, $max_resolution){
 
  if(file_exists($file)){
 
@@ -88,5 +88,5 @@ $file = $_FILES['image']['name'];
 
 resize_image($file, "200");
 
-
+*/
 ?>

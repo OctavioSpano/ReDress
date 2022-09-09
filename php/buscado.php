@@ -34,8 +34,8 @@ include ("encabezado.php")
 <a>
   <img id="rectangulo"src="../imagenes/Rectangulo.png">
 </a>
-<!--
-<div class="wrapper">
+
+$sal.='<div class="wrapper">
   <div class="container">
     <div class="top"></div>
     <div class="bottom">
@@ -95,7 +95,7 @@ include ("encabezado.php")
       </table>
     </div>
   </div>
-</div>
+</div>';
 
   <script src='../js/jquery-3.6.0.min'></script><script  src="../js/cards.js"></script>
-<!--
+  !>--
