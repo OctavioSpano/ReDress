@@ -555,6 +555,16 @@ video.responsive-video {
   height: 90%;
 }
 
+#prendascont{
+  position:absolute;
+  top: 35%;
+  right:50%;
+  height:50%;
+  width:92%;
+  left: 4%;
+  
+}
+
 /*
 .wrapper {
   position: absolute;
@@ -742,3 +752,4 @@ video.responsive-video {
 .wrapper .inside .contents p {
   font-size: 9px;
 }
+
