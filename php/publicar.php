@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../imagenes/Logo.png"> 
+
     <!--<link rel="stylesheet" href="../css/materialize.css" />-->
     <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
     <!--<script src="../js/materialize.js" type="text/javascript"></script>-->
