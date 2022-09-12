@@ -27,13 +27,13 @@ $("#barrabusqueda").keydown(function(e){
 		  success: function (datos) {
 					//alert (datos.result.Nombre);
 					if(datos['status'] == 'ok'){
-	                	prend="<label>"+datos.result.Nombre +' '+ datos.result.Apellido+"</label>";
-	                	prend+="<img class='responsive-img' src= "+datos.result.RutaFoto+">";
+	                	prend="<label id='lblcard'>"+datos.result.Nombre +' '+ datos.result.Apellido+"</label>";
+	                	prend+="<img id='imgcardcont' class='responsive-img' src= "+datos.result.RutaFoto+">";
 	            		
 	                }else{
 						alert ("No hay nada");
 	                }
-            	$("#prendascont").html(prend);
+            	$("#cardcont").html(prend);
             },
 		  error: function(error) {
 			    ;

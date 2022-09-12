@@ -10,7 +10,6 @@ body{
   overflow: hidden;
 }
 
-
 .acceso-usuario{
   position: absolute;
   width: 65.9%;
@@ -557,6 +556,32 @@ video.responsive-video {
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
   background: rgba(255, 254, 254, 0.38);
 
+}
+#lblcard{
+  position: absolute;
+  top: 85%;
+  z-index: 2;
+  left: 18%;
+}
+#imgcardcont{
+position: absolute;
+border-radius: 40px;
+top:15%;
+height:200px;
+width:200px;
+}
+
+#cardcont{
+width: 200px;
+height: 200px;
+z-index: 1;
+border-radius: 15px;
+position:absolute;
+left:5%;
+}
+#cardcont :hover{
+transform: scale(1);
+box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
 }
 
 /*
