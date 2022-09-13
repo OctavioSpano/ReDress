@@ -71,7 +71,6 @@ session_start();?>
   <img id="btnremera"src="../imagenes/Boton Remera.png">
 </button>
 !-->
-<input type="button" value="Say Hi!" onclick="location='publicar.php'" />
 
 
 </body>
