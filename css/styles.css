@@ -562,28 +562,31 @@ video.responsive-video {
 }
 #lblcard{
   position: absolute;
-  top: 82%;
+  top: 91%;
   z-index: 2;
   font-size: 20px;
-  left: 18%;
+  left: 12%;
   text-align:center;
 }
 #imgcardcont{
 position: absolute;
 border-radius: 30px;
-top:8%;
 height:250px;
 width:250px;
+left: 8%;
+top: 10%;
+
 }
 
 #cardcont{
 width: 300px;
-height: 350px;
-z-index: 1;
+height: 312px;
+z-index: 0;
 border-radius: 15px;
 position:absolute;
-left:5%;
+left: 0%;
 align-content: center;
+text-align: center;
 }
 #cardcont :hover{
 transform: scale(1);

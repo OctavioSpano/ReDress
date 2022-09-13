@@ -1,4 +1,5 @@
-<?session_start();?>
+<?php
+session_start();?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +13,7 @@
   </head>
     <body>
   	<div id="login-reg" class="acceso-usuario">
-  		 <?
+  		 <?php
         if (isset($_SESSION['nom'])){
           echo $_SESSION['nom'];
           echo "<br><a href='LogOut.php'>Cerrar Sesión</a>";
@@ -70,6 +71,7 @@
   <img id="btnremera"src="../imagenes/Boton Remera.png">
 </button>
 !-->
+<input type="button" value="Say Hi!" onclick="location='publicar.php'" />
 
 
 </body>
