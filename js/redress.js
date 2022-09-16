@@ -17,7 +17,8 @@ $("#ufile").change(function () {
 
 $("#barrabusqueda").keydown(function(e){
 	if(e.which == 13) {
-
+		$izq=0;
+		prend='';
 		//alert('You pressed enter!');
 		$.ajax({
 		  type: 'POST',
@@ -26,14 +27,20 @@ $("#barrabusqueda").keydown(function(e){
 		  data: 'barrabusqueda=' + $("#barrabusqueda").val() ,
 		  success: function (datos) {
 					//alert (datos.result.Nombre);
-					if(datos['status'] == 'ok'){
-	                	prend="<label id='lblcard'>"+datos.result.Nombre +' '+ datos.result.Apellido+"</label>";
-	                	prend+="<img id='imgcardcont' class='responsive-img' src= "+datos.result.RutaFoto+">";
-	            		
-	                }else{
-						alert ("No hay nada");
-	                }
-            	$("#cardcont").html(prend);
+						
+						$.each(datos, function(i, item) {
+								//console.log(item);
+								//alert ("<div id=card"+i+" class='cardcont'>");
+								prend+="<div id= 'card"+i+"' class='cardcont'>";
+								prend+="<label id='lblcard'>"+item.Nombre +' '+ item.Apellido+"</label>";
+	                			prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
+	            				prend+="</div>";
+                    			$("#prendascont").append(prend);
+                    			$("#card"+i+"").css("left",$izq+"%");
+	            				$izq+=27;
+                    	});
+	              	
+            			
             },
 		  error: function(error) {
 			    ;
