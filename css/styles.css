@@ -165,6 +165,7 @@ form .txt_field{
   border-radius: 75%;
   font-family: Compote;
   position: absolute;
+  z-index: 4;
   top: 87%;
   right: 3%;
   background: black;
@@ -172,6 +173,10 @@ form .txt_field{
   font-size: 30px;
   font-weight: bolder;
 }
+.btnpublicar:hover{
+  transform: scale(1);
+  box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+  }
 
   #botonP{
   width: 20%;
@@ -552,9 +557,11 @@ video.responsive-video {
   position:absolute;
   top: 35%;
   right:50%;
-  height:50%;
+  height:54%;
   width:92%;
   left: 4%;
+  overflow-x: auto;
+  overflow-y: hidden;
   border-radius: 10px;
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
   background: rgba(255, 254, 254, 0.38);
