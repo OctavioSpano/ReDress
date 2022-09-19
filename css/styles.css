@@ -625,7 +625,10 @@ box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
  .inside:hover i{
   display: none;
  }
- .inside :hover label{
+ .inside label{
+  visibility: hidden;
+ }
+ .inside:hover label {
   visibility: visible;
  }
 
