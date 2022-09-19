@@ -638,6 +638,19 @@ position: absolute;
 #lbldescCard{
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 5%;
   font-size: 18px;
 }
+#lbltalleCard{
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  font-size: 18px;
+}
+#lblusadoCard{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-size: 18px;
+}
+

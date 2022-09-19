@@ -1,5 +1,49 @@
 $(document).ready(function(){
 
+prendainicio();
+
+
+function prendainicio(){
+		$izq=0;
+		prend='';
+		details='';
+		//alert('You pressed enter!');
+		$.ajax({
+		  type: 'POST',
+		  url: '../php/random.php',
+          dataType: "json",
+		  //data: 'barrabusqueda=' + $("#barrabusqueda").val() ,
+		  success: function (datos) {
+					//alert (datos.result.Nombre);
+						
+						$.each(datos, function(i, item) {
+								//console.log(item);
+								//alert ("<div id=card"+i+" class='cardcont'>");
+								prend+="<div id= 'card"+i+"' class='cardcont'>";
+								prend+="<label id='lblcard'>"+item.Nombre +' '+ item.Apellido+"</label>";
+	                			prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
+	                			prend+="<div class='inside'>";
+	                			prend+= "<i id='info_outline' class='small material-icons'>info_outline</i>";
+	                			prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
+	                			prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
+	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
+	                			prend+= "</div>";
+	            				prend+="</div>";
+                    			$("#prendascont").append(prend);
+
+                    			$("#card"+i+"").css("left",$izq+"%");
+	            				$izq+=27;
+	            				$("#imgcardcont").append(details);
+                    	});
+	              	
+            			
+            },
+		  error: function(error) {
+			    ;
+   			},
+		});
+}
+
 
 function imagePreview(fileInput) {
     if (fileInput.files && fileInput.files[0]) {
@@ -16,6 +60,7 @@ $("#ufile").change(function () {
 });
 
 $("#barrabusqueda").keydown(function(e){
+	//$("#prendascont").empty();
 	if(e.which == 13) {
 		$izq=0;
 		prend='';
@@ -36,6 +81,10 @@ $("#barrabusqueda").keydown(function(e){
 								prend+="<label id='lblcard'>"+item.Nombre +' '+ item.Apellido+"</label>";
 	                			prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
 	                			prend+="<div class='inside'>";
+	                			prend+= "<i id='info_outline' class='small material-icons'>info_outline</i>";
+	                			prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
+	                			prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
+	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
 	                			prend+= "</div>";
 	            				prend+="</div>";
                     			$("#prendascont").append(prend);
