@@ -5,15 +5,15 @@ $talles = filter_input(INPUT_POST, 'talles', FILTER_SANITIZE_STRING);
 $desc = $_POST ['desc'];
 $color = $_POST['color'];
 if (isset($_POST['chbxUsado'])){
-  $usado = "S";
+  $usado = "Si";
 }  
 else{
-  $usado = "N";
+  $usado = "No";
 }
 
 $con = mysqli_connect("localhost", "root", "rootroot", "redressbd");
 
-$sql ="INSERT INTO prendas (IDUsuario, Descripcion, Talle, TipoPrenda, Usado) VALUES (".$_SESSION['idu'].",'".$desc."','".$talles."','".$tipoprenda."','".$usado."')"; 
+$sql ="INSERT INTO prendas (IDUsuario, Descripcion, Talle, TipoPrenda, Usado, Color) VALUES (".$_SESSION['idu'].",'".$desc."','".$talles."','".$tipoprenda."','".$usado."','".$color."')"; 
 $resultado=mysqli_query($con, $sql);
 $lastid = mysqli_insert_id($con);   
 //guarda foto en carpeta y en la base de datos

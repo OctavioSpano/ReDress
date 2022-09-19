@@ -27,6 +27,7 @@ function prendainicio(){
 	                			prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
 	                			prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
+	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
 	            				prend+="</div>";
                     			$("#prendascont").append(prend);
@@ -34,7 +35,8 @@ function prendainicio(){
                     			$("#card"+i+"").css("left",$izq+"%");
 	            				$izq+=27;
 	            				$("#imgcardcont").append(details);
-                    	});
+	            			
+	            		});
 	              	
             			
             },
@@ -63,6 +65,7 @@ $("#barrabusqueda").keydown(function(e){
 	//$("#prendascont").empty();
 	if(e.which == 13) {
 		$izq=0;
+		$contador = 0;
 		prend='';
 		details='';
 		//alert('You pressed enter!');
@@ -74,10 +77,11 @@ $("#barrabusqueda").keydown(function(e){
 		  success: function (datos) {
 					//alert (datos.result.Nombre);
 						$("#prendascont").empty();
+						console.log(datos);
 						$.each(datos, function(i, item) {
 								//console.log(item);
 								//alert ("<div id=card"+i+" class='cardcont'>");
-								prend+="<div id= 'card"+i+"' class='cardcont'>";
+								prend+="<div id='card"+i+"' class='cardcont'>";
 								prend+="<label id='lblcard'>"+item.Nombre +' '+ item.Apellido+"</label>";
 	                			prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
 	                			prend+="<div class='inside'>";
@@ -85,12 +89,14 @@ $("#barrabusqueda").keydown(function(e){
 	                			prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
 	                			prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
+	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
 	            				prend+="</div>";
                     			$("#prendascont").append(prend);
 
                     			$("#card"+i+"").css("left",$izq+"%");
 	            				$izq+=27;
+	            				$contador+= 1;
 	            				$("#imgcardcont").append(details);
                     	});
 	              	

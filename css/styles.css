@@ -646,13 +646,19 @@ position: absolute;
 }
 #lbltalleCard{
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 5%;
   font-size: 18px;
 }
 #lblusadoCard{
   position: absolute;
-  top: 50%;
+  top: 60%;
+  left: 5%;
+  font-size: 18px;
+}
+#lblcolorCard{
+  position: absolute;
+  top: 80%;
   left: 5%;
   font-size: 18px;
 }
