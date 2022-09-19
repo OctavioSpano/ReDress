@@ -19,6 +19,7 @@ $("#barrabusqueda").keydown(function(e){
 	if(e.which == 13) {
 		$izq=0;
 		prend='';
+		details='';
 		//alert('You pressed enter!');
 		$.ajax({
 		  type: 'POST',
@@ -27,17 +28,21 @@ $("#barrabusqueda").keydown(function(e){
 		  data: 'barrabusqueda=' + $("#barrabusqueda").val() ,
 		  success: function (datos) {
 					//alert (datos.result.Nombre);
-						
+						$("#prendascont").empty();
 						$.each(datos, function(i, item) {
 								//console.log(item);
 								//alert ("<div id=card"+i+" class='cardcont'>");
 								prend+="<div id= 'card"+i+"' class='cardcont'>";
 								prend+="<label id='lblcard'>"+item.Nombre +' '+ item.Apellido+"</label>";
 	                			prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
+	                			prend+="<div class='inside'>";
+	                			prend+= "</div>";
 	            				prend+="</div>";
                     			$("#prendascont").append(prend);
+
                     			$("#card"+i+"").css("left",$izq+"%");
 	            				$izq+=27;
+	            				$("#imgcardcont").append(details);
                     	});
 	              	
             			
