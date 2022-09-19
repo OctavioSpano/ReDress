@@ -9,6 +9,7 @@ session_start();?>
     <link rel="stylesheet" href="../css/styles.css" />
      <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
      <script src="../js/redress.js" type="text/javascript"></script> 
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link rel="icon" href="../imagenes/Logo.png"> 
   </head>
     <body>
