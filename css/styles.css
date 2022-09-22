@@ -13,7 +13,7 @@ body{
 .acceso-usuario{
   width: 65.9%;
   height: 4.5%;
-  margin-left: 750px;
+  margin-left: 710px;
   margin-top: 60px;
   font-family: 'Compote';
   font-style: normal;
@@ -128,17 +128,19 @@ form .txt_field{
   color: #666666;
 }
 #logofoto{
-  margin-top:-70px;
-  margin-left: 35px;
+  position: absolute;
+  top: 15px;
+  left: 35px;
   height: 24%;
   width: 13%;
 
 }
 #pendientes{
-  margin-top: -2.2%;
-  margin-right: 40%;
+  position: absolute;
+  top: 50px;
+  right: 900px;
   height:65px;
-  width:100px;  
+  width:100px;    
 }
 
 .signup_link a{
@@ -177,9 +179,8 @@ form .txt_field{
   #botonP{
   width: 20%;
   height: 50px;
-  position: absolute;
-  top: 80%;
-  left: 40%;
+  margin-top: 380px;
+  margin-left: 20px;
   border: 1px solid;
   font-family: Compote;
   border-radius: 25px;
@@ -226,11 +227,11 @@ form .txt_field{
  }
 
 [name='prenda']{
+  position: absolute;
   width: 15%;
   height: 7%;
-  position: absolute;
-  left: 15%;
-  top: 19.5%;
+  left: 190px;
+  top: 115px;
   font-size: 23px;
   border: none;
   background: none;
@@ -239,8 +240,8 @@ form .txt_field{
 
 .chbxUsado{
   position: absolute;
-  top: 45%;
-  left: 27.5%;
+  margin-top: 175px;
+  margin-left: -283px;
   width: 3%;
   height: 3%;
 }
@@ -249,8 +250,8 @@ form .txt_field{
   position: absolute;
   height: 5%;
   width: 20%;
-  top: 45%;
-  left: 15%;
+  margin-top: 170px;
+  margin-left: -448px;
   font-size: 23px;
   border-radius: 7px;
   text-align: left;
@@ -324,17 +325,17 @@ align-content: center;
 }
 
 #campana{
-  position:absolute;
-  top: 9%;
-  right:21%;
+  position: absolute;
+  top: 50px;
+  right: 270px;
   height:58px;
   width:62px;
 }
 
 #btn_mapa{
-  position:absolute;
-  top: 9%;
-  right:77%;
+  position: absolute;
+  top: 50px;
+  right: 980px;
   height:60px;
   width:78px;
 }
@@ -343,56 +344,56 @@ align-content: center;
   position:absolute;
   top: 24%;
   right:72%;
-  height:58px;
-  width:140px;
+  height:50px;
+  width:136px;
 }
 
 #btn_remera{
   position:absolute;
   top: 24%;
   right:61%;
-  height:58px;
-  width:140px;
+  height:50px;
+  width:136px;
 }
 
 #btn_buzo{
   position:absolute;
   top: 24%;
   right:50%;
-  height:58px;
-  width:140px;
+  height:50px;
+  width:136px;
 }
 
 #btn_ropinterior{
   position:absolute;
   top: 24%;
   right:39%;
-  height:58px;
-  width:140px;
+  height:50px;
+  width:136px;
 }
 
 #btn_zapas{
   position:absolute;
   top: 24%;
   right:28%;
-  height:58px;
-  width:140px;
+  height:50px;
+  width:136px;
 }
 
 #btn_camperas{
   position:absolute;
   top: 24%;
   right:17%;
-  height:58px;
-  width:140px;
+  height:50px;
+  width:136px;
 }
 
 #btn_shorts{
   position:absolute;
   top: 24%;
   right:6%;
-  height:58px;
-  width:140px;
+  height:50px;
+  width:136px;
 }
 
 #flechaatras{
