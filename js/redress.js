@@ -29,12 +29,13 @@ function prendainicio(){
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
 	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
+	                			prend+= "<button id='btnMatch"+i+"'>";
 	            				prend+="</div>";
                     			$("#prendascont").append(prend);
 
                     			$("#card"+i+"").css("left",$izq+"%");
 	            				$izq+=27;
-	            				$("#imgcardcont").append(details);
+	            				// $("#imgcardcont").append(details);
 	            			
 	            		});
 	              	
@@ -91,6 +92,7 @@ $("#barrabusqueda").keydown(function(e){
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
 	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
+	                			prend+= "<button id='btnMatch"+i+"' onclick=LoQuiero()>";
 	            				prend+="</div>";
                     			$("#prendascont").append(prend);
 
@@ -111,6 +113,12 @@ $("#barrabusqueda").keydown(function(e){
 	
 });
 
+<?php 
+function LoQuiero(){
 
+
+?>
+
+}
 
 });
