@@ -4,7 +4,9 @@ prendainicio();
 
 
 function prendainicio(){
-		$izq=0;
+		$("#prendascont").html("");
+		contador=0;
+		izq=0;
 		prend='';
 		details='';
 		//alert('You pressed enter!');
@@ -29,22 +31,26 @@ function prendainicio(){
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
 	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
-	                			prend+= "<button id='btnMatch"+i+"'>";
+	                			prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
 	            				prend+="</div>";
-                    			$("#prendascont").append(prend);
-
-                    			$("#card"+i+"").css("left",$izq+"%");
-	            				$izq+=27;
-	            				// $("#imgcardcont").append(details);
+                    			
+	            				contador++;
+                    			// $("#imgcardcont").append(details);
 	            			
 	            		});
-	              	
+	              		$("#prendascont").append(prend);
+                    	for(y=0;y<contador;y++){
+							$("#card"+y+"").css("left",izq+"%");
+	            			izq+=27;
+                    	}
+						quiero();
             			
             },
 		  error: function(error) {
 			    ;
    			},
 		});
+		
 }
 
 
@@ -63,10 +69,10 @@ $("#ufile").change(function () {
 });
 
 $("#barrabusqueda").keydown(function(e){
-	//$("#prendascont").empty();
+	$("#prendascont").html("");
 	if(e.which == 13) {
-		$izq=0;
-		$contador = 0;
+		izq=0;
+		contador=0;
 		prend='';
 		details='';
 		//alert('You pressed enter!');
@@ -92,17 +98,20 @@ $("#barrabusqueda").keydown(function(e){
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
 	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
-	                			prend+= "<button id='btnMatch"+i+"' onclick=LoQuiero()>";
+	                			prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
 	            				prend+="</div>";
-                    			$("#prendascont").append(prend);
-
-                    			$("#card"+i+"").css("left",$izq+"%");
-	            				$izq+=27;
-	            				$contador+= 1;
-	            				$("#imgcardcont").append(details);
+                    			
+	            				contador++;
+                    			//$("#imgcardcont").append(details);
+	            				//alert (i);
                     	});
+                    	$("#prendascont").append(prend);
+                    	for(y=0;y<contador;y++){
+							$("#card"+y+"").css("left",izq+"%");
+	            			izq+=27;
+                    	}
 	              	
-            			
+            			quiero();
             },
 		  error: function(error) {
 			    ;
@@ -113,12 +122,30 @@ $("#barrabusqueda").keydown(function(e){
 	
 });
 
-<?php 
-function LoQuiero(){
+
+function quiero(){
+	$(".que").click(function(e){
+		dat=$(this).prop("id").split("|");
+		alert (dat[0]+"xxxx"+dat[1]);
+		// $.ajax({
+		// 	  type: 'POST',
+		// 	  url: '../php/reserva.php',
+	 //          dataType: "json",
+		// 	  data: 'IDP=' + dat[0]+'&IDO='+dat[1]+'' ,
+		// 	  success: function (datos) {
+		// 		$.each(datos, function(i, item) {
+						
+  //           	});
+  //           },
+		//   error: function(error) {
+		// 	    ;
+  //  			},
+		// });
+		
 
 
-?>
-
+			//alert ($(this).prop('id'));
+	});
 }
 
 });
