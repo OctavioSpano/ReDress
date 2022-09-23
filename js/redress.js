@@ -126,26 +126,27 @@ $("#barrabusqueda").keydown(function(e){
 function quiero(){
 	$(".que").click(function(e){
 		dat=$(this).prop("id").split("|");
-		alert (dat[0]+"xxxx"+dat[1]);
-		// $.ajax({
-		// 	  type: 'POST',
-		// 	  url: '../php/reserva.php',
-	 //          dataType: "json",
-		// 	  data: 'IDP=' + dat[0]+'&IDO='+dat[1]+'' ,
-		// 	  success: function (datos) {
-		// 		$.each(datos, function(i, item) {
+		// alert (dat[0]+"xxxx"+dat[1]);
+		$.ajax({
+			  type: 'POST',
+			  url: '../php/reserva.php',
+	          dataType: "json",
+			  data: 'IDP=' + dat[0]+'&IDO='+dat[1]+'' ,
+			  success: function (datos) {
+			  	
+// 				// $.each(datos, function(i, item) {
 						
-  //           	});
-  //           },
-		//   error: function(error) {
-		// 	    ;
-  //  			},
-		// });
+//             	// });
+             },
+ 		  error: function(error) {
+ 			    ;
+    			},
+ 		});
 		
 
 
-			//alert ($(this).prop('id'));
-	});
-}
+// 			//alert ($(this).prop('id'));
+ 	});
+ }
 
 });
