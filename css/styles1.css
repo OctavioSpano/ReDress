@@ -1,0 +1,123 @@
+#acceso-usuario{
+	font-family: 'Roboto';
+	color: red;
+	font-weight: bolder;
+	height: 50px;
+	width: 100px;
+}
+
+#btnremeras{
+	font-family: 'Roboto';
+	border-radius: 50px;
+  	background:#DFD69E;
+  	color: black;
+  	font-weight: bolder;
+  	height: 60px;
+  	width: 120px;
+  	font-size: 14px;
+  	display: inline-flex;
+  	align-items: center;
+  	text-align: center;
+}
+
+#btnbuzos{
+	font-family: 'Roboto';
+	border-radius: 50px;
+  	background:#DFD69E;
+  	color: black;
+  	font-weight: bolder;
+  	height: 60px;
+  	width: 120px;
+  	font-size: 14px;
+  	display: inline-flex;
+  	align-items: center;
+  	text-align: center;
+}
+
+#btnropaInterior{
+	font-family: 'Roboto';
+	border-radius: 50px;
+  	background:#DFD69E;
+  	color: black;
+	font-weight: bolder;
+  	height: 60px;
+  	width: 120px;
+  	font-size: 14px;
+  	display: inline-flex;
+  	align-items: center;
+  	text-align: center;
+  }
+
+#btnzapas{
+	font-family: 'Roboto';
+	border-radius: 50px;
+  	background:#DFD69E;
+  	color: black;
+  	font-weight: bolder;
+  	height: 60px;
+  	width: 120px;
+  	font-size: 14px;
+  	display: inline-flex;
+  	align-items: center;
+  	padding: 7px 5;
+  	text-align: center;
+}
+
+#btncamperas{
+	font-family: 'Roboto';
+	border-radius: 50px;
+  	background:#DFD69E;
+  	color: black;
+  	font-weight: bolder;
+  	height: 60px;
+  	width: 120px;
+  	font-size: 14px;
+  	display: inline-flex;
+  	align-items: center;
+  	text-align: center;
+}
+
+#btnshorts{
+	font-family: 'Roboto';
+	border-radius: 50px;
+  	background:#DFD69E;
+  	color: black;
+  	font-weight: bolder;
+  	height: 60px;
+  	width: 120px;
+  	font-size: 14px;
+  	display: inline-flex;
+  	align-items: center;
+  	text-align: center;
+}
+
+#btnpantalones{
+	font-family: 'Roboto';
+	border-radius: 50px;
+  	background:#DFD69E;
+  	color: black;
+  	font-weight: bolder;
+  	height: 60px;
+  	width: 120px;
+  	font-size: 14px;
+  	display: inline-flex;
+  	align-items: center;
+  	text-align: center;
+}
+
+#btnpendientes{
+	color: black;
+}
+
+#btnnotificaciones{
+	color: black;
+}
+
+#btnmapa{
+	color: black;
+}
+
+#btnpublicar{
+	background-color: black;
+}
+
