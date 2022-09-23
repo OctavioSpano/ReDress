@@ -11,9 +11,9 @@ body{
 }
 
 .acceso-usuario{
-  width: 65.9%;
-  height: 4.5%;
-  margin-left: 710px;
+  width: 63%;
+  height: 4%;
+  margin-left: 800px;
   margin-top: 60px;
   font-family: 'Compote';
   font-style: normal;
@@ -138,7 +138,7 @@ form .txt_field{
 #pendientes{
   position: absolute;
   top: 50px;
-  right: 900px;
+  right: 970px;
   height:65px;
   width:100px;    
 }
@@ -335,65 +335,65 @@ align-content: center;
 #btn_mapa{
   position: absolute;
   top: 50px;
-  right: 980px;
+  right: 1050px;
   height:60px;
   width:78px;
 }
 
 #btn_pantalones{
-  position:absolute;
-  top: 24%;
-  right:72%;
-  height:50px;
-  width:136px;
+  position:relative;
+  margin-top: 80px;
+  margin-left: -1050px;
+  height: 58px;
+  width: 140px;
 }
 
 #btn_remera{
-  position:absolute;
-  top: 24%;
-  right:61%;
-  height:50px;
-  width:136px;
+  position: relative;
+  margin-top: 24px;
+  margin-left: 390px;
+  height: 58px;
+  width: 140px;
 }
 
 #btn_buzo{
-  position:absolute;
-  top: 24%;
-  right:50%;
-  height:50px;
-  width:136px;
+  position: relative;
+  margin-top: 24px;
+  margin-left: 80px;
+  height: 58px;
+  width: 140px;
 }
 
 #btn_ropinterior{
-  position:absolute;
-  top: 24%;
-  right:39%;
-  height:50px;
-  width:136px;
+  position: relative;
+  margin-top: 24px;
+  margin-right: 10px;
+  height: 58px;
+  width: 140px;
 }
 
 #btn_zapas{
-  position:absolute;
-  top: 24%;
-  right:28%;
-  height:50px;
-  width:136px;
+  position: relative;
+  margin-top: 24px;
+  margin-right: 30px;
+  height:58px;
+  width:140px;
 }
 
 #btn_camperas{
-  position:absolute;
-  top: 24%;
-  right:17%;
-  height:50px;
-  width:136px;
+  position:relative;
+  margin-top: 24px;
+  margin-right:-10px;
+  height:58px;
+  width:140px;
 }
 
 #btn_shorts{
-  position:absolute;
-  top: 24%;
-  right:6%;
-  height:50px;
-  width:136px;
+  position:relative;
+  margin-top: 24px;
+  margin-right:-50px;
+  height:58px;
+  width:140px;
 }
 
 #flechaatras{
