@@ -148,5 +148,57 @@ function quiero(){
 // 			//alert ($(this).prop('id'));
  	});
  }
+ atajo="";
 
+$(".atajos").click(function(e){
+	$("#prendascont").empty();
+
+	atajo=$(this).prop("id").split("/");
+	izq=0;
+	alert (atajo[1]);
+	$.ajax({
+		type: 'POST',
+		url: '../php/buscado.php',
+		dataType: "json",
+		data: 'atajo=' + atajo[1] ,
+		
+		success: function (datos) {
+				  //alert (datos.result.Nombre);
+					  console.log(datos);
+					  $.each(datos, function(i, item) {
+							console.log(item);
+							  //alert ("<div id=card"+i+" class='cardcont'>");
+							  prend+="<div id='card"+i+"' class='cardcont'>";
+							  prend+="<label id='lblcard'>"+item.Nombre +' '+ item.Apellido+"</label>";
+							  prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
+							  prend+="<div class='inside'>";
+							  prend+= "<i id='info_outline' class='small material-icons'>info_outline</i>";
+							  prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
+							  prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
+							  prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
+							  prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
+							  prend+= "</div>";
+							  prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
+							  prend+="</div>";
+							  
+							  contador++;
+							  //$("#imgcardcont").append(details);
+							  //alert (i);
+					  });
+					  $("#prendascont").append(prend);
+					  for(y=0;y<contador;y++){
+						  $("#card"+y+"").css("left",izq+"%");
+						  izq+=27;
+					  }
+					
+					  quiero();
+		  },
+		error: function(error) {
+			  ;
+			 },
+	  });
+
+  }
+  
+);
 });
