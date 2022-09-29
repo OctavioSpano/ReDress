@@ -149,6 +149,30 @@ function quiero(){
  	});
  }
  atajo="";
+$(".removefav").click(function(e){
+		dat=$(this).prop("id").split("/");
+		alert (dat[0]+"xxxx"+dat[1]);
+		$.ajax({
+			  type: 'POST',
+			  url: '../php/dislike.php',
+	          dataType: "json",
+			  data: 'ID='+dat[1]+'' ,
+			  success: function (datos) {
+			  	
+// 				// $.each(datos, function(i, item) {
+						
+//             	// });
+             },
+ 		  error: function(error) {
+ 			    ;
+    			},
+ 		});
+		
+
+
+// 			//alert ($(this).prop('id'));
+ 	});
+ }
 
 $(".atajos").click(function(e){
 	$("#prendascont").empty();
