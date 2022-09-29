@@ -1,15 +1,27 @@
+body{
+	font-family: Compote;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background:#DFD69E;
+  	height: 100vh;
+  	overflow: auto;
+}
+
 #acceso-usuario{
-	font-family: 'Roboto';
 	color: red;
 	font-weight: bolder;
-	height: 50px;
-	width: 100px;
+	width: 210px;
+	font-family: 'Compote';
+  	font-style: normal;
+  	font-weight: 400;
+  	font-size: 23px;
+  	line-height: 42px;
 }
 
 #btnremeras{
 	font-family: 'Roboto';
 	border-radius: 50px;
-  	background:#DFD69E;
+  	background: white;
   	color: black;
   	font-weight: bolder;
   	height: 60px;
@@ -18,12 +30,12 @@
   	display: inline-flex;
   	align-items: center;
   	text-align: center;
-}
+  }
 
 #btnbuzos{
 	font-family: 'Roboto';
 	border-radius: 50px;
-  	background:#DFD69E;
+  	background: white;
   	color: black;
   	font-weight: bolder;
   	height: 60px;
@@ -37,7 +49,7 @@
 #btnropaInterior{
 	font-family: 'Roboto';
 	border-radius: 50px;
-  	background:#DFD69E;
+  	background: white;
   	color: black;
 	font-weight: bolder;
   	height: 60px;
@@ -51,7 +63,7 @@
 #btnzapas{
 	font-family: 'Roboto';
 	border-radius: 50px;
-  	background:#DFD69E;
+  	background: white;
   	color: black;
   	font-weight: bolder;
   	height: 60px;
@@ -66,7 +78,7 @@
 #btncamperas{
 	font-family: 'Roboto';
 	border-radius: 50px;
-  	background:#DFD69E;
+  	background: white;
   	color: black;
   	font-weight: bolder;
   	height: 60px;
@@ -80,7 +92,7 @@
 #btnshorts{
 	font-family: 'Roboto';
 	border-radius: 50px;
-  	background:#DFD69E;
+  	background: white;
   	color: black;
   	font-weight: bolder;
   	height: 60px;
@@ -94,7 +106,7 @@
 #btnpantalones{
 	font-family: 'Roboto';
 	border-radius: 50px;
-  	background:#DFD69E;
+  	background: white;
   	color: black;
   	font-weight: bolder;
   	height: 60px;
@@ -121,3 +133,60 @@
 	background-color: black;
 }
 
+#barrabusqueda{
+	border-radius: 20px;
+	background: white;
+	box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+#prendascont{
+  top: 35%;
+  right:50%;
+  height:54%;
+  width:92%;
+  left: 4%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 254, 254, 0.38);
+
+}
+#lblcard{
+  top: 91%;
+  z-index: 2;
+  font-size: 20px;
+  left: 12%;
+  text-align:center;
+}
+#imgcardcont{
+border-radius: 30px;
+height:250px;
+width:250px;
+right: 8%;
+top: 10%;
+}
+
+.cardcont{
+width: 300px;
+height: 312px;
+z-index: 0;
+border-radius: 15px;
+align-content: center;
+text-align: center;
+}
+
+.cardcont :hover{
+transform: scale(1);
+box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.inside {
+  z-index: 9;
+  background: #D9534F;
+  width: 40px;
+  height: 40px;
+  border-radius: 0px 0px 200px 200px;
+  transition: all 0.5s, border-radius 2s, top 1s;
+  overflow: hidden;
+}

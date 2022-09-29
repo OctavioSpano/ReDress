@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("encabezado1.php");
+include("encabezado.php");
 ?>
 <div id="prendascont">
 	
