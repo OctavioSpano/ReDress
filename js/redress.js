@@ -35,6 +35,7 @@ function prendainicio(){
 								prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";	                			prend+="</div>"; 
 	                			//prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
 	            				prend+="</div>";
+	            				prend+="</div>";
                     			
 	            				contador++;
                     			// $("#imgcardcont").append(details);
@@ -101,7 +102,7 @@ $("#barrabusqueda").keydown(function(e){
 	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 
 	                			prend+= "</div>";
-	                			prend+="<div class ='middle'";
+	                			prend+="<div class ='middle'>";
 	                			prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
 	                			prend+="</div>"; 
 	                			//prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
@@ -146,17 +147,18 @@ function quiero(){
              },
  		  error: function(error) {
  			    ;
-    			},
+    	}
+ 		// 			//alert ($(this).prop('id'));
  		});
-		
-
-
-// 			//alert ($(this).prop('id'));
- 	});
+	});
  }
- atajo="";
- remove="";
+
+
+
+
 $(".removefav").click(function(e){
+		 atajo="";
+ 		remove="";
 		remove=$(this).prop("id").split("/");
 		alert (remove[0]+"xxxx"+remove[1]);
 		$.ajax({
@@ -179,38 +181,45 @@ $(".removefav").click(function(e){
 
 // 			//alert ($(this).prop('id'));
  	});
- })
+
 
 $(".atajos").click(function(e){
 	$("#prendascont").empty();
-
-	atajo=$(this).prop("id").split("/");
+	prend='';
+	contador=0;
+	atajo=$(this).prop("id");
 	izq=0;
-	alert (atajo[1]);
+	//alert (atajo);
+
 	$.ajax({
 		type: 'POST',
 		url: '../php/buscado.php',
 		dataType: "json",
-		data: 'atajo=' + atajo[1] ,
+		data: 'atajo=' + atajo +'',
 		
 		success: function (datos) {
 				  //alert (datos.result.Nombre);
 					  console.log(datos);
+					  $("#prendascont").html("");
 					  $.each(datos, function(i, item) {
 							console.log(item);
 							  //alert ("<div id=card"+i+" class='cardcont'>");
 							  prend+="<div id='card"+i+"' class='cardcont'>";
-							  prend+="<label id='lblcard'>"+item.Nombre +' '+ item.Apellido+"</label>";
-							  prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
-							  prend+="<div class='inside'>";
-							  prend+= "<i id='info_outline' class='small material-icons'>info_outline</i>";
-							  prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
-							  prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
-							  prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
-							  prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
-							  prend+= "</div>";
-							  prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
-							  prend+="</div>";
+								prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
+	                			prend+="<div class='inside'>";
+	                			prend+= "<i id='info_outline' class='small material-icons'>info_outline</i>";
+	                			prend+="<br><label id='lblnomCard'> Nombre: " + item.Nombre +' '+ item.Apellido+"</label>";
+	                			prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
+	                			prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
+	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
+	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
+
+	                			prend+= "</div>";
+	                			prend+="<div class ='middle'>";
+	                			prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
+	                			prend+="</div>"; 
+	                			//prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
+	            				prend+="</div>";
 							  
 							  contador++;
 							  //$("#imgcardcont").append(details);
@@ -229,8 +238,6 @@ $(".atajos").click(function(e){
 			 },
 	  });
 
-  }
-  
-)
 
-
+  });
+});

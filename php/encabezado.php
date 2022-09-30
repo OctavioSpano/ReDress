@@ -48,26 +48,26 @@ session_start();?>
 </a>
 
 </a>
-<a id="atajo/remera"class="atajos">
+<a id="remera"class="atajos">
     <img id="btn_remera"src="../imagenes/Boton Remera.png">
 </a>
-  <a id="atajo/hoodies"class="atajos">
+  <a id="hoodies"class="atajos">
     <img id="btn_buzo"src="../imagenes/Boton hoodies.png">
 </a>
-<a id="atajo/interior"class="atajos">
+<a id="interior"class="atajos">
   <img id="btn_ropinterior"src="../imagenes/Boton ropa interior.png">
 </a>
-<a id="atajo/zapa"class="atajos">
+<a id="zapa"class="atajos">
   <img id="btn_zapas"src="../imagenes/Boton zapatillas.png">
 </a>
-<a id="atajo/campera"class="atajos">
+<a id="campera"class="atajos">
   <img id="btn_camperas"src="../imagenes/Boton camperas.png">
 </a>
   <a href="buscado1.php">
   <img id="btn_shorts"src="../imagenes/Boton camperas (1).png">
 </a>
 </a>
-<a id="atajo/pantal"class="atajos">
+<a id="pantal"class="atajos">
     <img id="btn_pantalones"src="../imagenes/Boton Pantalones.png">
 </a>
 <!--<button value="remera" onclick="atajosfunc() "id="btnRem">
