@@ -64,41 +64,41 @@ session_start();?>
     
 </a>
 <div class="row">
-        <div class="col s4 l1">
+        <div class="col s4 l15">
             <a href="buscado1.php" id="btnremeras" class="waves-effect waves-light btn">Remeras</a>
 <!--            <a href="buscado1.php">
             <img id="btn_remera"src="../imagenes/Boton Remera.png">
           </a>-->
         </div>
-        <div class="col s4 l1">
+        <div class="col s4 l15">
             <a href="buscado1.php"  id="btnbuzos" class="waves-effect waves-light btn">Buzos</a>
 <!--            <a href="buscado1.php">
             <img id="btn_buzo"src="../imagenes/Boton hoodies.png">
             </a>-->
         </div>
-        <div class="col s4 l1">
+        <div class="col s4 l15">
             <a href="buscado1.php" id="btnropaInterior" class="waves-effect waves-light btn">Ropa Interior</a>
 <!--            <a href="buscado1.php">
             <img id="btn_ropinterior"src="../imagenes/Boton ropa interior.png">
             </a>-->
         </div>
-        <div class="col s4 l1">    
+        <div class="col s4 l15">    
             <a href="buscado1.php" id="btnzapas" class="waves-effect waves-light btn">Zapatillas</a>
 <!--        <a href="buscado1.php">
             <img id="btn_zapas"src="../imagenes/Boton zapatillas.png">
             </a>-->
         </div>
-        <div class="col s4 l1">
+        <div class="col s4 l15">
             <a href="buscado1.php" id="btncamperas" class="waves-effect waves-light btn">Camperas</a>
 <!--        <img id="btn_camperas"src="../imagenes/Boton camperas.png">
             </a>-->
         </div>
-        <div class="col s4 l1">
+        <div class="col s4 l15">
             <a href="buscado1.php" id="btnshorts" class="waves-effect waves-light btn">Shorts</a>
 <!--            <img id="btn_shorts"src="../imagenes/Boton camperas (1).png">
                 </a>-->
         </div>
-        <div class="col s4 l1">       
+        <div class="col s4 l15">       
             <a href="buscado1.php" id="btnpantalones" class="waves-effect waves-light btn">Pantalones</a>
 <!--          <img id="btn_pantalones"src="../imagenes/Boton Pantalones.png">
               </a>-->
