@@ -172,7 +172,7 @@ $(".removefav").click(function(e){
 
 // 			//alert ($(this).prop('id'));
  	});
- }
+ })
 
 $(".atajos").click(function(e){
 	$("#prendascont").empty();
@@ -224,5 +224,6 @@ $(".atajos").click(function(e){
 
   }
   
-);
-});
+)
+
+
