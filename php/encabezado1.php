@@ -82,18 +82,18 @@ session_start();?>
             </a>-->
         </div>
         <div class="col s4 l15">    
-            <a id="zapas" class="atajos boton waves-effect waves-light btn">Zapatillas</a>
+            <a id="zapa" class="atajos boton waves-effect waves-light btn">Zapatillas</a>
 <!--        <a href="buscado1.php">
             <img id="btn_zapas"src="../imagenes/Boton zapatillas.png">
             </a>-->
         </div>
         <div class="col s4 l15">
-            <a id="camperas" class="atajos boton waves-effect waves-light btn">Camperas</a>
+            <a id="campera" class="atajos boton waves-effect waves-light btn">Camperas</a>
 <!--        <img id="btn_camperas"src="../imagenes/Boton camperas.png">
             </a>-->
         </div>
         <div class="col s4 l15">
-            <a id="shorts" class="atajos boton waves-effect waves-light btn">Shorts</a>
+            <a id="short" class="atajos boton waves-effect waves-light btn">Shorts</a>
 <!--            <img id="btn_shorts"src="../imagenes/Boton camperas (1).png">
                 </a>-->
         </div>

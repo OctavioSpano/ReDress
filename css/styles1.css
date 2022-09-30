@@ -26,13 +26,11 @@ body{
   width: 120px;
   background-color: white;
   color:black;
-
-
 }
 #publicarbtn{
   position: absolute;
   left:94%;
-  top:73%;
+  top:87%;
 }
 /*
 #btnremeras{
@@ -158,9 +156,9 @@ body{
 }
 
 #prendascont{
-  top: -3%;
+  top: 3%;
   right:50%;
-  height:54%;
+  height:60%;
   width:92%;
   left: 4%;
   overflow-x: auto;
