@@ -22,10 +22,10 @@ function prendainicio(){
 								//console.log(item);
 								//alert ("<div id=card"+i+" class='cardcont'>");
 								prend+="<div id= 'card"+i+"' class='cardcont'>";
-								prend+="<label id='lblcard'>"+item.Nombre +' '+ item.Apellido+"</label>";
 	                			prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
 	                			prend+="<div class='inside'>";
 	                			prend+= "<i id='info_outline' class='small material-icons'>info_outline</i>";
+								prend+="<br><label id='lblnomCard'> Nombre: " + item.Nombre +' '+ item.Apellido+"</label>";
 	                			prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
 	                			prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";

@@ -133,7 +133,6 @@ body{
 #btnpublicar{
 	background-color: black;
   position: relative;
-  
 }
 
 #barrabusqueda{
@@ -189,6 +188,9 @@ body{
 }
 
 .inside {
+  position: absolute;
+  top: 10%;
+  left: 8.5%;
   z-index: 9;
   background: #D9534F;
   width: 40px;
@@ -196,4 +198,62 @@ body{
   border-radius: 0px 0px 200px 200px;
   transition: all 0.5s, border-radius 2s, top 1s;
   overflow: hidden;
+}
+
+.inside .icon {
+  right: 85px;
+  top: 85px;
+  color: white;
+  opacity: 1;
+}
+ .inside:hover {
+  right: 8;
+  top: 0;
+  border-radius: 0;
+  height: 80%;
+  top: 10%;
+  width: 83%;
+  right: 8%;
+  border-radius: 15px;
+}
+ .inside:hover i{
+  display: none;
+ }
+ .inside label{
+  visibility: hidden;
+ }
+ .inside:hover label {
+  visibility: visible;
+ }
+
+ #lbldescCard{
+  top: 10%;
+  left: 5%;
+  font-size: 18px;
+  color: black;
+}
+#lbltalleCard{
+  top: 40%;
+  left: 5%;
+  font-size: 18px;
+  color: black;
+}
+#lblusadoCard{
+  top: 60%;
+  left: 5%;
+  font-size: 18px;
+  color: black;
+}
+#lblcolorCard{
+  top: 80%;
+  left: 5%;
+  font-size: 18px;
+  color: black;
+}
+
+#lblnomCard{
+  top: 10%;
+  left: 5%;
+  font-size: 18px;
+  color: black;
 }
