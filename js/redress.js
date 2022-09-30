@@ -31,7 +31,9 @@ function prendainicio(){
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
 	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
-	                			prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
+	                			prend+="<div class ='middle'>";
+								prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";	                			prend+="</div>"; 
+	                			//prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
 	            				prend+="</div>";
                     			
 	            				contador++;
@@ -89,16 +91,20 @@ $("#barrabusqueda").keydown(function(e){
 								//console.log(item);
 								//alert ("<div id=card"+i+" class='cardcont'>");
 								prend+="<div id='card"+i+"' class='cardcont'>";
-								prend+="<label id='lblcard'>"+item.Nombre +' '+ item.Apellido+"</label>";
-	                			prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
+								prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
 	                			prend+="<div class='inside'>";
 	                			prend+= "<i id='info_outline' class='small material-icons'>info_outline</i>";
+	                			prend+="<br><label id='lblnomCard'> Nombre: " + item.Nombre +' '+ item.Apellido+"</label>";
 	                			prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
 	                			prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
 	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
+
 	                			prend+= "</div>";
-	                			prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
+	                			prend+="<div class ='middle'";
+	                			prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
+	                			prend+="</div>"; 
+	                			//prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
 	            				prend+="</div>";
                     			
 	            				contador++;
@@ -149,14 +155,15 @@ function quiero(){
  	});
  }
  atajo="";
+ remove="";
 $(".removefav").click(function(e){
-		dat=$(this).prop("id").split("/");
-		alert (dat[0]+"xxxx"+dat[1]);
+		remove=$(this).prop("id").split("/");
+		alert (remove[0]+"xxxx"+remove[1]);
 		$.ajax({
 			  type: 'POST',
 			  url: '../php/dislike.php',
 	          dataType: "json",
-			  data: 'ID='+dat[1]+'' ,
+			  data: 'ID='+remove[1]+'' ,
 			  success: function (datos) {
 			  	
 // 				// $.each(datos, function(i, item) {
