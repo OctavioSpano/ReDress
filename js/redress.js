@@ -32,9 +32,9 @@ function prendainicio(){
 	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
 	                			prend+="<div class ='middle'>";
-								prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";	                			prend+="</div>"; 
+								prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";	                			
+								prend+="</div>"; 
 	                			//prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
-	            				prend+="</div>";
 	            				prend+="</div>";
                     			
 	            				contador++;
@@ -155,32 +155,25 @@ function quiero(){
 
 
 
-
+ remove="";
 $(".removefav").click(function(e){
-		 atajo="";
- 		remove="";
-		remove=$(this).prop("id").split("/");
-		alert (remove[0]+"xxxx"+remove[1]);
+		remove=$(this).prop("id");
+		// alert (remove);
 		$.ajax({
 			  type: 'POST',
 			  url: '../php/dislike.php',
 	          dataType: "json",
-			  data: 'ID='+remove[1]+'' ,
+			  data: 'IDpub='+remove+'',
 			  success: function (datos) {
 			  	
-// 				// $.each(datos, function(i, item) {
-						
-//             	// });
              },
  		  error: function(error) {
  			    ;
     			},
  		});
 		
-
-
-// 			//alert ($(this).prop('id'));
  	});
+
 
 
 $(".atajos").click(function(e){
