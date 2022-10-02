@@ -8,7 +8,7 @@ $buscar = $_REQUEST['barrabusqueda'];
 $data=array();
 //$consulta= "SELECT * FROM prendas p where TipoPrenda like '%".$buscar."%' ";
 
-$consulta= "SELECT *,u.Nombre,u.Apellido FROM prendas p INNER JOIN usuarios u ON p.IDUsuario=u.IDUsuario where TipoPrenda like '%".$buscar."%' or Descripcion like '%".$buscar."%' or Color LIKE '%".$buscar."%'";
+$consulta= "SELECT *,u.Nombre,u.Apellido FROM prendas p INNER JOIN usuarios u ON p.IDUsuario=u.IDUsuario where TipoPrenda like '%".$buscar."%' or Nombre  like '%".$buscar."%'  or Apellido  like '%".$buscar."%' or Descripcion like '%".$buscar."%' or Color LIKE '%".$buscar."%'";
 
 $res=mysqli_query($con, $consulta);
 
