@@ -22,7 +22,7 @@ session_start();?>
     <!--<form id="searchbtn" action="" method="">-->
      <div class="row">
         <div class="col s12 l1">
-            <a href="index.php"><img src="../imagenes/Logo.png" class="responsive-img"></a>
+            <a href="homeScreen.php"><img src="../imagenes/Logo.png" class="responsive-img"></a>
         </div>
         <div class="col s12 l1">
             <i id="lupita" class="medium material-icons">search</i>

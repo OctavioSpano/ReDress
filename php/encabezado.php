@@ -33,7 +33,7 @@ session_start();?>
     <div id="publicarbtn" >
       <button class="btnpublicar" onclick="location.href='publicar.php'">+</button>
   </div>
-  <a href="index.php" >
+  <a href="homeScreen.php" >
   <img id="logofoto" src="../imagenes/Logo.png"  >
   </a>
   <a href="pendientes.php">

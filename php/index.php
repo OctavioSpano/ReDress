@@ -12,8 +12,8 @@
      <link rel="icon" href="../imagenes/Logo.png"> 
   </head>
 <body>
+	<h1 id="lblSlogan" >Reduce. ReDress. Recicle</h1>
 	<a href="../php/homeScreen.php">
 		<img src="../imagenes/Logo.png" id="logoIndex">
-		<label id="lblSlogan" >Reduce. ReDress. Recicle</label>
 </body>
 </html>

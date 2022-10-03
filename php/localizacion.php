@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-  <a href="index.php" >
+  <a href="homeScreen.php" >
     <img id="flechaatras" src="../imagenes/flechaatras.png"  >
     </a>
   <h1 class="h1">Locales</h1>

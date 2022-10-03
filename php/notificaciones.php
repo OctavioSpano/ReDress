@@ -17,7 +17,7 @@ if(!isset($_SESSION['idu'])){
     <script src="../js/redress.js" type="text/javascript"></script>
 
   </head>
-  <a href="index.php" >
+  <a href="homeScreen.php" >
     <img id="flechaatras" src="../imagenes/flechaatras.png"  >
     </a>
   <h1 class="h1">Notificaciones</h1>
