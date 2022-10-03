@@ -154,18 +154,19 @@ function quiero(){
  }
 
 
-
- remove="";
 $(".removefav").click(function(e){
-		remove=$(this).prop("id");
-		// alert (remove);
+		remove=$(this).prop("id").split("|");
+		//alert ($(this).prop("id"));
+
 		$.ajax({
 			  type: 'POST',
 			  url: '../php/dislike.php',
 	          dataType: "json",
-			  data: 'IDpub='+remove+'',
+			  data: 'IDpub='+remove[0]+'',
 			  success: function (datos) {
-			  	
+			  	//alert("#".remove[1]."");
+			  	$("#"+remove[1]+"").remove();
+			  	window.location.href = "pendientes.php";
              },
  		  error: function(error) {
  			    ;
@@ -174,7 +175,11 @@ $(".removefav").click(function(e){
 		
  	});
 
-
+// btnacept="";
+// $(".aceptar").click(function(e)){
+// btnacept=$(this).prop("id").split("|");
+// alert (btnacept[0] + " xxx " + btnacept[1] + " xxx " + btnacept[2]);
+// }
 
 $(".atajos").click(function(e){
 	$("#prendascont").empty();

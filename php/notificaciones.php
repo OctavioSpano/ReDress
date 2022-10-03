@@ -12,6 +12,7 @@ if(!isset($_SESSION['idu'])){
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/styles1.css" />
     <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
     <script src="../js/redress.js" type="text/javascript"></script>
 
@@ -50,8 +51,9 @@ while ($row = $res->fetch_assoc()) {
               // echo $infolike['Nombre'] ." ".$infolike['Apellido'] ;
               echo "<div class='cardcont'style='margin-left:".$izq."%;height:250px;width:250px;' >";
               echo "<h2>".$data[$i]['TipoPrenda']."</h2>";
-              echo "<h3>La persona que le ha dado Like a tu prenda es: ".$infolike['Nombre'] ." ".$infolike['Apellido']."</h2>";
-              echo "<img class='responsive-img' src=".$data[$i]['RutaFoto']." style='border-radius:60;heigth:150px;width:150px;'>";
+              echo "<h3>A ".$infolike['Nombre'] ." ".$infolike['Apellido']." le ha gustado tu prenda</h2>";
+              echo "<img class='responsive-img' src=".$data[$i]['RutaFoto']." >";
+              echo "<button id='".$data[$i]['IDPublicacion']."|".$data[$i]['IDUsuario']."|".$usuariolike."'class='aceptar'style='background-color: green;'>";
               echo "</div>";
           $i++;
           $izq+=20;
