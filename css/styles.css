@@ -10,6 +10,22 @@ body{
   overflow: hidden;
 }
 
+#logoIndex{
+  position: relative;
+  height: 60%;
+  width: 30%;
+  top: 15%;
+  left: 32%;
+}
+
+#lblSlogan{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  top: 30%;
+  left: 20%;
+}
+
 .acceso-usuario{
   width: 63%;
   height: 4%;
@@ -230,8 +246,8 @@ form .txt_field{
   position: absolute;
   width: 15%;
   height: 7%;
-  left: 190px;
-  top: 115px;
+  left: 15%;
+  top: 19%;
   font-size: 23px;
   border: none;
   background: none;
@@ -240,8 +256,8 @@ form .txt_field{
 
 .chbxUsado{
   position: absolute;
-  margin-top: 175px;
-  margin-left: -283px;
+  top: 45.5%;
+  left: 27.6%;
   width: 3%;
   height: 3%;
 }
@@ -250,8 +266,8 @@ form .txt_field{
   position: absolute;
   height: 5%;
   width: 20%;
-  margin-top: 170px;
-  margin-left: -448px;
+  top: 45%;
+  left: 15%;
   font-size: 23px;
   border-radius: 7px;
   text-align: left;

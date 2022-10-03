@@ -7,6 +7,12 @@ body{
   overflow: auto;
 }
 
+#logoIndex{
+  position: absolute;
+  height: 70px;
+  width: 70px;
+}
+
 #acceso-usuario{
 	color: red;
 	font-weight: bolder;
