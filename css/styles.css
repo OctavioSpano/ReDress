@@ -14,16 +14,16 @@ body{
   position: relative;
   height: 60%;
   width: 30%;
-  top: 15%;
+  top: -30%;
   left: 32%;
 }
 
 #lblSlogan{
   position: relative;
-  height: 150px;
-  width: 150px;
-  top: 30%;
-  left: 20%;
+  height: 250px;
+  width: 350px;
+  top: 80%;
+  left: 36%;
 }
 
 .acceso-usuario{
