@@ -41,10 +41,10 @@ while ($row = $res->fetch_assoc()) {
       while($datos = $res2->fetch_assoc()){
             //$data['status']='ok';
               $data[$i] = $datos;
-              echo "<div style='margin-left:".$izq."%;height:250px;width:250px;' >";
+              echo "<div class='cardcont'style='margin-left:".$izq."%;height:250px;width:250px;' >";
               echo "<h2>".$data[$i]['TipoPrenda']."</h2>";
               echo "<h3>".$data[$i]['Nombre']." ".$data[$i]['Apellido']."</h2>";
-              echo "<img class='img-responsive' src=".$data[$i]['RutaFoto']." style='border-radius:60;heigth:150px;width:150px;'>";
+              echo "<img class='responsive-img' src=".$data[$i]['RutaFoto']." >";
               echo "<button id='".$data[$i]['IDPublicacion']."'class='removefav'></button>";
               echo "</div>";
           $i++;

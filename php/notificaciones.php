@@ -51,7 +51,7 @@ while ($row = $res->fetch_assoc()) {
               echo "<div class='cardcont'style='margin-left:".$izq."%;height:250px;width:250px;' >";
               echo "<h2>".$data[$i]['TipoPrenda']."</h2>";
               echo "<h3>La persona que le ha dado Like a tu prenda es: ".$infolike['Nombre'] ." ".$infolike['Apellido']."</h2>";
-              echo "<img class='img-responsive' src=".$data[$i]['RutaFoto']." style='border-radius:60;heigth:150px;width:150px;'>";
+              echo "<img class='responsive-img' src=".$data[$i]['RutaFoto']." style='border-radius:60;heigth:150px;width:150px;'>";
               echo "</div>";
           $i++;
           $izq+=20;
