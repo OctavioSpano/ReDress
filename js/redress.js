@@ -56,7 +56,46 @@ function prendainicio(){
 		
 }
 
+$(".aceptar").click(function(e){
+	btnacept=$(this).prop("id");
+	// alert (btnacept);
 
+	$.ajax({
+		type: 'POST',
+		url: '../php/aceptar.php',
+		dataType: "json",
+		data: 'ID='+btnacept+'',
+		success: function (datos) {
+			
+	   },
+	 error: function(error) {
+		   ;
+		  },
+   });
+
+});
+
+$(".rechazar").click(function(e){
+	remove=$(this).prop("id");
+	//alert ($(this).prop("id"));
+
+	$.ajax({
+		  type: 'POST',
+		  url: '../php/rechazar.php',
+		  dataType: "json",
+		  data: 'IDpub='+remove+'',
+		  success: function (datos) {
+			  //alert("#".remove[1]."");
+			  $("#"+remove+"").remove();
+			  window.location.href = "notificaciones.php";
+		 },
+	   error: function(error) {
+			 ;
+			},
+	 });
+	
+});
+	
 function imagePreview(fileInput) {
     if (fileInput.files && fileInput.files[0]) {
         var fileReader = new FileReader();
@@ -173,13 +212,8 @@ $(".removefav").click(function(e){
     			},
  		});
 		
- 	});
+});
 
-// btnacept="";
-// $(".aceptar").click(function(e)){
-// btnacept=$(this).prop("id").split("|");
-// alert (btnacept[0] + " xxx " + btnacept[1] + " xxx " + btnacept[2]);
-// }
 
 $(".atajos").click(function(e){
 	$("#prendascont").empty();
@@ -238,4 +272,5 @@ $(".atajos").click(function(e){
 
 
   });
+
 });

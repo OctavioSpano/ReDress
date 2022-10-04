@@ -17,19 +17,21 @@ if(!isset($_SESSION['idu'])){
     <script src="../js/redress.js" type="text/javascript"></script>
 
   </head>
+  <body>
   <a href="homeScreen.php" >
     <img id="flechaatras" src="../imagenes/flechaatras.png"  >
     </a>
   <h1 class="h1">Notificaciones</h1>
+  <div id="noticont" class="container-prendas">
 
   <?php
   session_start();
   $usuario = $_SESSION['idu'];
   $con = mysqli_connect("localhost", "root", "rootroot", "redressbd");
-  $consulta = "SELECT IDPublicacion, IDUsuario from pendientes where IDOwner = '$usuario'";
+  $consulta = "SELECT * from pendientes where IDOwner = '$usuario'";
   $res=$con->query($consulta);
 $i=0;
-$izq = 0;
+$izq = 5;
 $data = array();
 while ($row = $res->fetch_assoc()) {
   $elegido=$row["IDPublicacion"];
@@ -44,22 +46,29 @@ while ($row = $res->fetch_assoc()) {
 
         $consu="SELECT * from usuarios where IDUsuario = ".$usuariolike."";
         $res3 = mysqli_query($con, $consu);
-
+        $sal='';
         while($infolike = $res3->fetch_assoc()){
               $data[$i] = $datos;
               // echo $data[$i]['IDPublicacion'];
               // echo $infolike['Nombre'] ." ".$infolike['Apellido'] ;
-              echo "<div class='cardcont'style='margin-left:".$izq."%;height:250px;width:250px;' >";
-              echo "<h2>".$data[$i]['TipoPrenda']."</h2>";
-              echo "<h3>A ".$infolike['Nombre'] ." ".$infolike['Apellido']." le ha gustado tu prenda</h2>";
-              echo "<img class='responsive-img' src=".$data[$i]['RutaFoto']." >";
-              echo "<button id='".$data[$i]['IDPublicacion']."|".$data[$i]['IDUsuario']."|".$usuariolike."'class='aceptar'style='background-color: green;'>";
-              echo "</div>";
+              $sal.= "<div class='cardcont'style='margin-left:".$izq."%;height:250px;width:250px;' >";
+              $sal.= "<h2>".$data[$i]['TipoPrenda']."</h2>";
+              $sal.= "<h3>A ".$infolike['Nombre'] ." ".$infolike['Apellido']." le ha gustado tu prenda</h2>";
+              $sal.= "<img class='responsive-img' src=".$data[$i]['RutaFoto']." ></br>";
+              $sal.= "<button id='".$row['ID']."'class='aceptar' style='background-color: green;'></button></br>";
+              $sal.= "<button id='".$row['ID']."'class='rechazar' style='background-color: red;'></button>";
+              $sal.= "</div>";
           $i++;
           $izq+=20;
         }
+        
       }
   }
+  echo $sal;
 }
 
 ?>
+
+</div>
+</body>
+</html>

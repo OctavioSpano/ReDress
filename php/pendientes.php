@@ -46,7 +46,7 @@ $sal='';
               $sal.= "<div class='cardcont'style='margin-left:".$izq."%;height:250px;width:250px;' id=".$row['ID']." >";
               //  $sal.="<h2>".$data[$i]['TipoPrenda']."</h2>";
               $sal.="<h3>".$data[$i]['Nombre']." ".$data[$i]['Apellido']."</h2>";
-              $sal.= "<img class='responsive-img' src=".$data[$i]['RutaFoto']." >";
+              $sal.= "<img class='responsive-img' src=".$data[$i]['RutaFoto']." ></br>";
               $sal.= "<a id='".$data[$i]['IDPublicacion']."|".$row['ID']."' class='removefav'>";
               $sal.= "<img src = '../imagenes/Tacho.png' style='height:50;width:50px;'>";
               // $sal.="</button>";

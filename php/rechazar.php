@@ -5,7 +5,7 @@ $usuario = $_SESSION['idu'];
 echo ($publi);
 
 $con = mysqli_connect("localhost", "root", "rootroot", "redressbd");
-$consulta = "DELETE FROM pendientes WHERE IDUsuario = ".$usuario." AND IDPublicacion = ".$publi."";
+$consulta = "DELETE FROM pendientes WHERE ID = ".$publi."";
 $resultado=mysqli_query($con, $consulta);
 // echo $consulta;
 
