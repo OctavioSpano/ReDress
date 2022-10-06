@@ -26,12 +26,15 @@ body{
 }
 
 .boton{
-
   border-radius: 50px;
   height: 40px;
   width: 120px;
   background-color: white;
   color:black;
+}
+
+.boton:hover{
+  background: #D9534F;
 }
 #publicarbtn{
   position: absolute;
@@ -156,9 +159,27 @@ body{
 }
 
 #barrabusqueda{
+  margin-left: -100px;
+  width: 500px;
+  margin-top: 10px;
 	border-radius: 20px;
 	background: white;
 	box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+#barrabusqueda::placeholder{
+  text-align: center;
+}
+
+#barrabusqueda{
+  text-align: center;
+}
+
+#lupita{
+  position: absolute;
+  top: 18px;
+  left: 150px;
+  height: 200px;
 }
 
 /*.removefav{
@@ -213,6 +234,7 @@ body{
   text-align:center;
   position: absolute;
 }
+
 #imgcardcont{
   border-radius: 30px;
   height:250px;
@@ -257,12 +279,12 @@ body{
   opacity: 1;
 }
  .inside:hover {
-  right: 8;
+  right: 9;
   top: 0;
   border-radius: 0;
   height: 80%;
   top: 10%;
-  width: 83%;
+  width: 84%;
   right: 8%;
   border-radius: 15px;
 }

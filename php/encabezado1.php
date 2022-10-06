@@ -25,7 +25,7 @@ session_start();?>
             <a href="homeScreen.php"><img src="../imagenes/Logo.png" class="responsive-img"></a>
         </div>
         <div class="col s12 l1">
-            <i id="lupita" class="medium material-icons">search</i>
+            <i id="lupita" class="small material-icons">search</i>
             <!--<img id="lupita"  class="responsive-img" src="../imagenes/Imagen Lupa.png">-->
          </div>
          <div class="col s12 l4">

@@ -26,10 +26,12 @@ session_start();?>
       ?>
 
     </div>
+    <div>
     <!--<form id="searchbtn" action="" method="">-->
       <img id="lupita" src="../imagenes/Imagen Lupa.png">
       <input type="text" id= "barrabusqueda" name="barrabusqueda" placeholder="¿Qué estabas buscando?" class="barrabusqueda">	      
     <!--</form>-->
+  </div>
     <div id="publicarbtn" >
       <button class="btnpublicar" onclick="location.href='publicar.php'">+</button>
   </div>
