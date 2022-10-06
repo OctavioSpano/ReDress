@@ -34,7 +34,7 @@ body{
 }
 
 .boton:hover{
-  background: #D9534F;
+  background: #DAA06D ;
 }
 #publicarbtn{
   position: absolute;
@@ -264,7 +264,7 @@ body{
   top: 10%;
   left: 8.5%;
   z-index: 9;
-  background: #D9534F;
+  background: #DAA06D ;
   width: 40px;
   height: 40px;
   border-radius: 0px 0px 200px 200px;
