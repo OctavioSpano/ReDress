@@ -58,7 +58,7 @@ function prendainicio(){
 
 $(".aceptar").click(function(e){
 	btnacept=$(this).prop("id");
-	// alert (btnacept);
+	alert (btnacept);
 
 	$.ajax({
 		type: 'POST',

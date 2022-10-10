@@ -16,7 +16,7 @@
 	$res=$resultado->fetch_array();
  	$_SESSION['idu']=$res['IDUsuario'];
  	$_SESSION['nom']=$res['Nombre']." ".$res['Apellido'];
-	header("location:index.php");
+	header("location:homeScreen.php");
  }
 	else{
 		?>

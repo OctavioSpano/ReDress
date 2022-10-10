@@ -32,7 +32,7 @@ if (isset($_POST['botonP'])) {
 
     // Now let's move the uploaded image into the folder: image
     if (move_uploaded_file($tempname, $folder)) {
-        header("location:index.php");
+        header("location:homeScreen.php");
     } else {
         echo "<h3>  Failed to upload image!</h3>";
     }

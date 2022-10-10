@@ -24,7 +24,7 @@ if ($confcontra == $contra){
  	$_SESSION['idu']=$res2['IDUsuario'];
  	$_SESSION['nom']=$res2['Nombre']." ".$res2['Apellido'];
  	echo"<script>alert('Bienvenido! Se ha registrado correctamente!')</script>";
-	header("location:index.php");
+	header("location:homeScreen.php");
   }
 	else{
 		echo"<script>alert('Ha ocurrido un error, prueba nuevamente...');

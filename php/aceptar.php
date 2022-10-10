@@ -3,25 +3,29 @@
 $idpend = $_REQUEST['ID'];
 
     $con = mysqli_connect("localhost", "root", "rootroot", "redressbd");
-    $consulta = "SELECT * from pendientes where ID = ".$idpend."";
+    $consulta = "SELECT * from pendientes where ID = '$idpend'";
     $resultado=mysqli_query($con, $consulta);
 
-    $consulta2 = "SELECT * from usuarios WHERE IDUsuario = ".$resultado['IDOwner']."";
-    $infoOwner=mysqli_query($con, $consulta2);
+    $row = $resultado -> fetch_assoc();
+    $idowner = $row['IDOwner'];
+    $iduser = $row['IDUsuario'];
+    $idpubli = $row['IDPublicacion'];
 
-    $consulta3 = "SELECT from usuarios WHERE IDUsuario = ".$resultado['IDUsuario']."";
-    $infoUser=mysqli_query($con, $consul3);
 
-    // $mailOwner = "umanskynico@gmail.com";
-    // $telOwner = "11 3815-4578";
-    // echo $idpend;
-    // echo $consulta2;
+    $consulta2 = "SELECT * from usuarios WHERE IDUsuario = '$idowner'";
+    $resultado2=mysqli_query($con, $consulta2);
 
-    // $nameOwner = "Nico";
- 	// $apeOwner = "Umansky";
+    $infoOwner = $resultado2 -> fetch_assoc();
 
- 	// $nameLiker = "Micaela";
- 	// $apeLiker = "Umansky";
+    $consulta3 = "SELECT * from usuarios WHERE IDUsuario = '$iduser'";
+    $resultado3=mysqli_query($con, $consulta3);
+
+    $infoUser = $resultado3 -> fetch_assoc();
+
+    $consulta4 = "SELECT * from prendas WHERE IDPublicacion = '$idpubli'";
+    $resultado4=mysqli_query($con, $consulta4);
+
+    $infoPrenda = $resultado4 -> fetch_assoc();
 
     $to = $infoUser['Mail'];
     $mailOwner = $infoOwner['Mail'];
@@ -29,6 +33,10 @@ $idpend = $_REQUEST['ID'];
     $telOwner = $infoOwner['Telefono'];
     $nameOwner = $infoOwner['Nombre'];
     $apeOwner = $infoOwner['Apellido'];
+    $pword = "obyhwpzprnuhbclq";
+
+    $descprenda = $infoPrenda['Descripcion'];
+    $tipoprenda = $infoPrenda['TipoPrenda'];
 
     $nameLiker = $infoUser['Nombre'];
     $apeLiker = $infoUser['Apellido'];
@@ -48,17 +56,17 @@ $idpend = $_REQUEST['ID'];
             $mail -> Host = 'smtp.gmail.com';
             $mail -> SMTPAuth = true;
             $mail -> Username = 'redress.tic@gmail.com';
-            $mail -> Password = 'password';
+            $mail -> Password = $pword;
             $mail -> SMTPSecure = 'tls';
             $mail -> Port = 587;
 
             $mail -> setFrom('redress.tic@gmail.com', 'ReDress');
-            $mail -> addAddress('redress.tic@gmail.com');
+            $mail -> addAddress($to);
 
             $mail -> isHTML(true);
             $mail -> Subject = 'Felicidades! Han aceptado tu solicitud de intercambio.';
             $mail -> Body = 'Hola <b>'.$nameLiker.' '.$apeLiker.'!</b></br>'
-            . '<br>Queríamos notificarte que <b>'.$nameOwner.' '.$apeOwner.'</b> aceptó cambiar una prenda contigo. Puedes ponerte en contacto a través de su numero de telefono: <b>'.$telOwner.'</b> o de su Mail: <b>'.$mailOwner.'</b>.</br>'
+            . '<br>Queríamos notificarte que <b>'.$nameOwner.' '.$apeOwner.'</b> aceptó cambiar una prenda ("<b><em>'.$descprenda.'</em></b>") contigo. Puedes ponerte en contacto a través de su numero de telefono: <b>'.$telOwner.'</b> o de su Mail: <b>'.$mailOwner.'</b>.</br>'
             . '<br>Muchas gracias por usar nuestra página web! El equipo de ReDress</br>';
 
             $mail -> send();
