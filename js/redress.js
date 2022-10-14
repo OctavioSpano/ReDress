@@ -58,19 +58,21 @@ function prendainicio(){
 
 $(function() {
   $( ".aceptar" ).click(function() {
-    $( ".aceptar" ).addClass( "onclic", 250, validate());
+  		btnaceptar=$(this).prop("id");
+    $( "#"+btnaceptar+"" ).addClass( "onclic", 250, validate());
   });
 
   function validate() {
     setTimeout(function() {
-      $( ".aceptar" ).removeClass( "onclic" );
-      $( ".aceptar" ).addClass( "validate", 450, callback());
+      $( "#"+btnaceptar+"" ).removeClass( "onclic" );
+      $( "#"+btnaceptar+"" ).addClass( "validate", 450, callback());
     }, 2250 );
   }
     function callback() {
       setTimeout(function() {
-        $( ".aceptar" ).removeClass( "validate" );
+        $( "#"+btnaceptar+"" ).removeClass( "validate" );
       }, 1250 );
+      btnaceptar="";
     }
   });
 
@@ -293,7 +295,7 @@ $(".atajos").click(function(e){
 $(".editar").click(function(e){
 		editID=$(this).prop("id");
 		//alert ($(this).prop("id"));
-		window.location.href = "../php/editar.php";
+		window.location.href = "../php/editar.php?editID="+editID+"";
 				
 });
 

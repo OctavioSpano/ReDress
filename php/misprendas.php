@@ -12,9 +12,13 @@ if(!isset($_SESSION['idu'])){
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/styles1.css" />
+<!--     <link rel="stylesheet" href="../css/materialize.css" />
+ --><link rel="stylesheet" href="../css/styles1.css" />
     <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
     <script src="../js/redress.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--     <script src="../js/materialize.js" type="text/javascript"></script> -->
 
   </head>
   <body>
@@ -54,7 +58,8 @@ while ($row = $res->fetch_assoc()) {
               $sal.= "<div class='cardcont'style='margin-left:".$izq."%;height:250px;width:250px;' >";
               $sal.= "<h2>".$data[$i]['TipoPrenda']."</h2>";
               $sal.= "<img class='responsive-img' src=".$data[$i]['RutaFoto']." ></br>";
-              $sal.= "<button id='".$row['IDPublicacion']."'class='editar' ></button></br>";
+              // $sal.= "<button id='".$row['IDPublicacion']."'class='editar' ></button></br>";
+              $sal.= "<a id='".$row['IDPublicacion']."' class='editar btn-floating btn-large cyan pulse'><i class='material-icons'>edit</i></a>";
               $sal.= "</div>";
           $i++;
           $izq+=20;
