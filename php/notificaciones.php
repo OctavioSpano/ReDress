@@ -21,7 +21,7 @@ if(!isset($_SESSION['idu'])){
   <a href="homeScreen.php" >
     <img id="flechaatras" src="../imagenes/flechaatras.png"  >
     </a>
-  <h1 class="titulo">Notificaciones</h1>
+  <h1 class="h1">Notificaciones</h1>
   <div id="noticont" class="container-prendas">
 
   <?php
@@ -37,7 +37,8 @@ while ($row = $res->fetch_assoc()) {
   $elegido=$row["IDPublicacion"];
   $usuariolike=$row["IDUsuario"];
 
-  $consulta2= "SELECT *,u.Nombre,u.Apellido FROM prendas p INNER JOIN usuarios u ON p.IDUsuario=u.IDUsuario where IDPublicacion=".$elegido."";
+  $consulta2= "SELECT *,u.Nombre,u.Apellido FROM prendas p INNER JOIN usuarios u ON p.IDUsuario=u.IDUsuario where Disponible = 0 AND 
+  IDPublicacion=".$elegido."";
 
   $res2=mysqli_query($con, $consulta2);
 

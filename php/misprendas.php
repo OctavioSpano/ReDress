@@ -25,7 +25,7 @@ if(!isset($_SESSION['idu'])){
   <a href="homeScreen.php" >
     <img id="flechaatras" src="../imagenes/flechaatras.png"  >
     </a>
-  <h1 class="titulo">Mis Prendas</h1>
+  <h1 class="h1">Mis Prendas</h1>
   <div id="noticont" class="container-prendas">
 
   <?php

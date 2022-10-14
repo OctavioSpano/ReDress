@@ -31,7 +31,7 @@ $resultado=mysqli_query($con, $consulta);
     <form id="frm1" method="POST" action="publicacion.php" enctype="multipart/form-data">
   	<div class="container">
       <!--<div class="centerpub">-->
-              <h1 class="titulo">Edita tu prenda</h1>
+              <h1 class="h1">Edita tu prenda</h1>
               <div class="tipo_prenda">
                 <label class="lblPrendas">Tipo de prenda: </label>
                 <select name="prenda">
