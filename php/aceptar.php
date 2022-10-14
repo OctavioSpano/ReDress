@@ -25,6 +25,9 @@ $idpend = $_REQUEST['ID'];
     $consulta4 = "SELECT * from prendas WHERE IDPublicacion = '$idpubli'";
     $resultado4=mysqli_query($con, $consulta4);
 
+    $consulta5 = "UPDATE prendas SET Disponible = 1 WHERE IDPublicacion = '$idpubli'";
+    $resultado5=mysqli_query($con, $consulta5);
+
     $infoPrenda = $resultado4 -> fetch_assoc();
 
     $to = $infoUser['Mail'];

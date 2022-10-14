@@ -9,6 +9,10 @@ $consulta = "DELETE FROM pendientes WHERE ID = ".$publi."";
 $resultado=mysqli_query($con, $consulta);
 // echo $consulta;
 
+$consulta5 = "UPDATE prendas SET Disponible = 1 WHERE IDPublicacion = '$publi'";
+$resultado5=mysqli_query($con, $consulta5);
+
+
  
 
 

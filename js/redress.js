@@ -32,7 +32,7 @@ function prendainicio(){
 	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
 	                			prend+="<div class ='middle'>";
-								prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";	                			
+								prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
 								prend+="</div>"; 
 	                			//prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
 	            				prend+="</div>";
@@ -56,9 +56,27 @@ function prendainicio(){
 		
 }
 
+$(function() {
+  $( ".aceptar" ).click(function() {
+    $( ".aceptar" ).addClass( "onclic", 250, validate());
+  });
+
+  function validate() {
+    setTimeout(function() {
+      $( ".aceptar" ).removeClass( "onclic" );
+      $( ".aceptar" ).addClass( "validate", 450, callback());
+    }, 2250 );
+  }
+    function callback() {
+      setTimeout(function() {
+        $( ".aceptar" ).removeClass( "validate" );
+      }, 1250 );
+    }
+  });
+
 $(".aceptar").click(function(e){
 	btnacept=$(this).prop("id");
-	alert (btnacept);
+	// alert (btnacept);
 
 	$.ajax({
 		type: 'POST',
@@ -272,5 +290,24 @@ $(".atajos").click(function(e){
 
 
   });
+$(".editar").click(function(e){
+		editID=$(this).prop("id");
+		//alert ($(this).prop("id"));
+
+		$.ajax({
+			  type: 'POST',
+			  url: '../php/editar.php',
+	          dataType: "json",
+			  data: 'IDEdit='+editID+'',
+			  success: function (datos) {
+			  window.location.href = "editar.php";
+             },
+ 		  error: function(error) {
+ 			    ;
+    			},
+ 		});
+		
+});
+
 
 });

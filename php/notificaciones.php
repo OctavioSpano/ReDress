@@ -55,7 +55,7 @@ while ($row = $res->fetch_assoc()) {
               $sal.= "<h2>".$data[$i]['TipoPrenda']."</h2>";
               $sal.= "<h3>A ".$infolike['Nombre'] ." ".$infolike['Apellido']." le ha gustado tu prenda</h2>";
               $sal.= "<img class='responsive-img' src=".$data[$i]['RutaFoto']." ></br>";
-              $sal.= "<button id='".$row['ID']."'class='aceptar' style='background-color: green;'></button></br>";
+              $sal.= "<button id='".$row['ID']."'class='aceptar' ></button></br>";
               $sal.= "<button id='".$row['ID']."'class='rechazar' style='background-color: red;'></button>";
               $sal.= "</div>";
           $i++;

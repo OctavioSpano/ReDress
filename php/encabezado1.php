@@ -28,7 +28,7 @@ session_start();?>
             <i id="lupita" class="small material-icons">search</i>
             <!--<img id="lupita"  class="responsive-img" src="../imagenes/Imagen Lupa.png">-->
          </div>
-         <div class="col s12 l4">
+         <div class="col s12 l3">
             <input type="text" id= "barrabusqueda" name="barrabusqueda" placeholder="¿Qué estabas buscando?" class="barrabusqueda">	      
         </div>
         <div class="col s2 l1">
@@ -49,6 +49,13 @@ session_start();?>
                 <!--<img class="responsive-img" id="btn_mapa"src="../imagenes/Mapa.png">-->
             </a>
         </div>
+        <div class="col s2 l1">  
+              <a href="misprendas.php" id="btnMisPrendas">
+                <i class="medium material-icons">person</i>
+                <!--<img class="responsive-img" id="btn_mapa"src="../imagenes/Mapa.png">-->
+            </a>
+        </div>
+
         <div class="col s6 l6" id="acceso-usuario">
               <?php
               if (isset($_SESSION['nom'])){

@@ -4,7 +4,7 @@ mysqli_select_db($con,"prendas");
 
 
 $data=array();
-$consulta = "SELECT IDPublicacion FROM prendas ORDER BY RAND() LIMIT 4";
+$consulta = "SELECT IDPublicacion FROM prendas WHERE Disponible = 0 ORDER BY RAND() LIMIT 4";
 $res=$con->query($consulta);
 $i=0;
 while ($row = $res->fetch_assoc()) {

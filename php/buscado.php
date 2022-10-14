@@ -7,7 +7,7 @@ $buscar = $_REQUEST['atajo'];
 $data=array();
 //$consulta= "SELECT * FROM prendas p where TipoPrenda like '%".$buscar."%' ";
 
-$consulta= "SELECT *,u.Nombre,u.Apellido FROM prendas p INNER JOIN usuarios u ON p.IDUsuario=u.IDUsuario where TipoPrenda like '%".$buscar."%'";
+$consulta= "SELECT *,u.Nombre,u.Apellido FROM prendas p INNER JOIN usuarios u ON p.IDUsuario=u.IDUsuario where Disponible = 0 AND TipoPrenda like '%".$buscar."%'";
 //echo $consulta;
 $res=mysqli_query($con, $consulta);
 
