@@ -293,20 +293,8 @@ $(".atajos").click(function(e){
 $(".editar").click(function(e){
 		editID=$(this).prop("id");
 		//alert ($(this).prop("id"));
-
-		$.ajax({
-			  type: 'POST',
-			  url: '../php/editar.php',
-	          dataType: "json",
-			  data: 'IDEdit='+editID+'',
-			  success: function (datos) {
-			  window.location.href = "editar.php";
-             },
- 		  error: function(error) {
- 			    ;
-    			},
- 		});
-		
+		window.location.href = "../php/editar.php";
+				
 });
 
 
