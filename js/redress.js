@@ -120,6 +120,7 @@ function imagePreview(fileInput) {
     if (fileInput.files && fileInput.files[0]) {
         var fileReader = new FileReader();
         fileReader.onload = function (event) {
+			$('#prew').html('');
             $('#prew').html('<img class="responsive-img" src="'+event.target.result+'" width="auto" height="auto"/>');
         };
         fileReader.readAsDataURL(fileInput.files[0]);

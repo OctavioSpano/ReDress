@@ -32,6 +32,8 @@ if (isset($_POST['botonP'])) {
 
     // Now let's move the uploaded image into the folder: image
     if (move_uploaded_file($tempname, $folder)) {
+        // $sql2 = "DELETE FROM Prendas Where IDPublicacion = ";
+        
         header("location:homeScreen.php");
     } else {
         echo "<h3>  Failed to upload image!</h3>";

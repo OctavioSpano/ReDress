@@ -59,7 +59,7 @@ while ($row = $res->fetch_assoc()) {
               $sal.= "<h2>".$data[$i]['TipoPrenda']."</h2>";
               $sal.= "<img class='responsive-img' src=".$data[$i]['RutaFoto']." ></br>";
               // $sal.= "<button id='".$row['IDPublicacion']."'class='editar' ></button></br>";
-              $sal.= "<a id='".$row['IDPublicacion']."' class='editar btn-floating btn-large cyan pulse'><i class='material-icons'>edit</i></a>";
+              $sal.= "<a id='".$row['IDPublicacion']."' class='editar btn-floating btn-large pulse'><i class='material-icons'>edit</i></a>";
               $sal.= "</div>";
           $i++;
           $izq+=20;

@@ -15,6 +15,8 @@ if(!isset($_SESSION['idu'])){
     <link rel="stylesheet" href="../css/styles1.css" />
     <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
     <script src="../js/redress.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
   </head>
   <body>
@@ -37,8 +39,7 @@ while ($row = $res->fetch_assoc()) {
   $elegido=$row["IDPublicacion"];
   $usuariolike=$row["IDUsuario"];
 
-  $consulta2= "SELECT *,u.Nombre,u.Apellido FROM prendas p INNER JOIN usuarios u ON p.IDUsuario=u.IDUsuario where Disponible = 0 AND 
-  IDPublicacion=".$elegido."";
+  $consulta2= "SELECT *,u.Nombre,u.Apellido FROM prendas p INNER JOIN usuarios u ON p.IDUsuario=u.IDUsuario where Disponible = 0 AND IDPublicacion=".$elegido."";
 
   $res2=mysqli_query($con, $consulta2);
 
@@ -50,14 +51,18 @@ while ($row = $res->fetch_assoc()) {
         $sal='';
         while($infolike = $res3->fetch_assoc()){
               $data[$i] = $datos;
-              // echo $data[$i]['IDPublicacion'];
-              // echo $infolike['Nombre'] ." ".$infolike['Apellido'] ;
               $sal.= "<div class='cardcont'style='margin-left:".$izq."%;height:250px;width:250px;' >";
               $sal.= "<h2>".$data[$i]['TipoPrenda']."</h2>";
               $sal.= "<h3>A ".$infolike['Nombre'] ." ".$infolike['Apellido']." le ha gustado tu prenda</h2>";
               $sal.= "<img class='responsive-img' src=".$data[$i]['RutaFoto']." ></br>";
               $sal.= "<button id='".$row['ID']."'class='aceptar' ></button></br>";
-              $sal.= "<button id='".$row['ID']."'class='rechazar' style='background-color: red;'></button>";
+              $sal.= "</br>";
+              $sal.= "<button id='".$row['ID']."' class='rechazar btndel btn-delete'>";
+              $sal.= "<span class='mdi mdi-delete mdi-24px'></span>";
+              $sal.="<span class='material-icons predelete'>delete</span>";
+              $sal.= "<span class='material-icons delete'>delete_forever</span>";
+              $sal.= "<span>RECHAZAR</span>";
+              // $sal.= "</button>";
               $sal.= "</div>";
           $i++;
           $izq+=20;
