@@ -20,7 +20,7 @@ if(!isset($_SESSION['idu'])){
     <script src="../js/redress.js" type="text/javascript"></script>
   </head>
   <body>
-    <a href="index.php" >
+    <a href="homeScreen.php" >
     <img id="flechaatras" src="../imagenes/flechaatras.png"  >
     </a>
     <form id="frm1" method="POST" action="publicacion.php" enctype="multipart/form-data">
@@ -52,9 +52,9 @@ if(!isset($_SESSION['idu'])){
 
               <label class="lblUsado">Usado: </label>
               <input type = "checkbox" name = "chbxUsado" class = "chbxUsado">
-              <div class="botonP">             
-              <input id="botonP" name="botonP" class="txt" type="Submit" value="Publicar">
-              </div>
+              <!-- <div class="botonP">              -->
+              <input id="botonP" name="botonP" class="txt botonP" type="Submit" value="Publicar">
+              <!-- </div> -->
               
               <div class="lista_talle">
               <label class="lblTalle">Talle: </label>

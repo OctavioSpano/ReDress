@@ -191,21 +191,28 @@ form .txt_field{
   transform: scale(1);
   box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
   }
-
-  #botonP{
-  width: 20%;
+  .botonE {
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    top: 83%;
+    left: 36%;
+}
+  .botonP{
+  width: 300px;
   height: 50px;
-  margin-top: 500px;
-  margin-left: 20px;
   border: 1px solid;
   font-family: Compote;
   border-radius: 25px;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
+  position: absolute;
+    top: 83%;
+    left: 36%;
 }
 
-#botonP:hover{
+.botonP:hover{
   background: #2691d9;
   color: #e9f4fb;
   transition: .5s;

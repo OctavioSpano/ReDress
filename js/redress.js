@@ -299,6 +299,22 @@ $(".editar").click(function(e){
 		window.location.href = "../php/editar.php?editID="+editID+"";
 				
 });
+$(".botonE").click(function(e){
+	idEdicion = $(this).prop("id");
+	$.ajax({
+		type: 'POST',
+		url: '../php/edicion.php',
+		dataType: "json",
+		data: 'idEdicion='+idEdicion+'',
+		success: function (datos) {
+			
+	   },
+	 error: function(error) {
+		   ;
+		  },
+   });
+
+});
 
 
 });

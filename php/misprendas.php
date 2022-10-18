@@ -41,7 +41,7 @@ while ($row = $res->fetch_assoc()) {
   $elegido=$row["IDPublicacion"];
   $usuariolike=$row["IDUsuario"];
 
-  $consulta2= "SELECT *,u.Nombre,u.Apellido FROM prendas p INNER JOIN usuarios u ON p.IDUsuario=u.IDUsuario where IDPublicacion=".$elegido."";
+  $consulta2= "SELECT *,u.Nombre,u.Apellido FROM prendas p INNER JOIN usuarios u ON p.IDUsuario=u.IDUsuario where Disponible = 0 AND IDPublicacion=".$elegido."";
 
   $res2=mysqli_query($con, $consulta2);
 

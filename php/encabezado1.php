@@ -51,7 +51,7 @@ session_start();?>
         </div>
         <div class="col s2 l1">  
               <a href="misprendas.php" id="btnMisPrendas">
-                <i class="medium material-icons">person</i>
+                <i class="medium material-icons">account_circle</i>
                 <!--<img class="responsive-img" id="btn_mapa"src="../imagenes/Mapa.png">-->
             </a>
         </div>
