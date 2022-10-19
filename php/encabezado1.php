@@ -60,9 +60,9 @@ session_start();?>
               <?php
               if (isset($_SESSION['nom'])){
                 echo $_SESSION['nom'];
-                echo "<br><a href='LogOut.php'>Cerrar Sesión</a>";
+                echo "<br><a id='cierresesion'href='LogOut.php'>Cerrar Sesión</a>";
               }else{
-                echo '<a href="registrar.php">Registrarte |</a><a href="login.php"> Iniciar Sesión</a>';
+                echo '<a id="preregistro" href="registrar.php">Registrarte |</a><a id="preinicio"href="login.php"> Iniciar Sesión</a>';
               }
             ?>
         </div>

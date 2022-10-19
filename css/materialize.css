@@ -2605,12 +2605,33 @@ ul:not(.browser-default) > li {
   list-style-type: none;
 }
 
-a {
-  color: #039be5;
+/*a {
+  color: red;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
+  -webkit-tap-highlight-color: transparent;
+}
+*/#btnMisPrendas {
+  color: #000000;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
 
+#cierresesion{
+  color: red;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+#cierresesion:hover {
+  color: red;
+  text-decoration: underline;
+  -webkit-tap-highlight-color: transparent;
+
+}
 .valign-wrapper {
   display: -webkit-box;
   display: -webkit-flex;

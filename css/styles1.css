@@ -14,11 +14,22 @@ body{
 }
 
 #acceso-usuario{
-	color: red;
+	color: blue;
 	font-weight: bolder;
 	width: 300px;
 	font-family: 'Compote';
 	font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 42px;
+  margin-top: 15px;
+}
+#preregistro, #preinicio{
+  color: blue;
+  font-weight: bolder;
+  width: 300px;
+  font-family: 'Compote';
+  font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 42px;
