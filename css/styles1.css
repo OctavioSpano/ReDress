@@ -194,7 +194,7 @@ body{
   right: 9;
   top: 0;
   border-radius: 0;
-  height: 80%;
+  height: 81%;
   top: 10%;
   width: 84%;
   right: 8%;
@@ -492,4 +492,8 @@ body{
 }
 .btn-delete:hover > .predelete {
   display: none;
+}
+
+.responsive-img{
+  border-radius: 10px;
 }
