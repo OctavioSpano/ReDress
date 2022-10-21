@@ -209,7 +209,7 @@ $sal.="              <label class='lblColor'>Color: </label>";
 $sal.="              <input type='text' value ='".$row['Color']."'placeholder='".$row['Color']."'name='color'>";
 $sal.="  </div>";
 $sal.="  </form>";
-$sal.="  </body>"<
+$sal.="  </body>"
 $sal.="</html>";
 
 echo $sal;
