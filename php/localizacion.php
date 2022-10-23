@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../imagenes/Logo.png"> 
+
   </head>
   <body>
   <a href="homeScreen.php" >

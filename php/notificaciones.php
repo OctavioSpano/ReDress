@@ -13,6 +13,7 @@ if(!isset($_SESSION['idu'])){
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/styles1.css" />
+    <link rel="icon" href="../imagenes/Logo.png"> 
     <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
     <script src="../js/redress.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

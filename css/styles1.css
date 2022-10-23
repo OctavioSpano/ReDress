@@ -241,13 +241,13 @@ body{
   font-size: 18px;
   color: black;
 }
-.middle{
+/* .middle{
   position: absolute;
   top: 95%;
   cursor: pointer;
   left: 30%;
   border-radius: 25px;
-  /*transform: translate(-50%,-50%);*/
+  /*transform: translate(-50%,-50%);
 }
 .btnlike{
   position: relative;
@@ -284,7 +284,94 @@ body{
 .btnloquiero:hover::before{
   width: 100%;
   
+} */
+.btnLoQuiero {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: #B1B2CF;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid #B1B2CF;
+  padding: 5px;
+  box-shadow: 0px 0px 15px #686FFD;
 }
+
+.btnLike {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2B3241;
+  border-radius: 25px;
+  transition: all 1s;
+}
+.btnLikeado {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  transition: all 1s;
+  background-color: green;
+  
+}
+.txtLoQuiero {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1em;
+  width: 100%;
+  margin: auto;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.btnLoQuiero i {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #686FFD;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+.btnLike:hover i {
+  transform: rotate(360deg);
+}
+
+.btnLike:hover {
+  width: 150px;
+  cursor: pointer;
+}
+
+.btnLike:hover a {
+  animation: 4.5s display forwards;
+}
+
+@keyframes display {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
 .aceptar {
    outline: none;
    height: 40px;

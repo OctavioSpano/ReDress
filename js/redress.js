@@ -14,7 +14,6 @@ function prendainicio(){
 		  type: 'POST',
 		  url: '../php/random.php',
           dataType: "json",
-		  //data: 'barrabusqueda=' + $("#barrabusqueda").val() ,
 		  success: function (datos) {
 					//alert (datos.result.Nombre);
 						
@@ -22,19 +21,25 @@ function prendainicio(){
 								//console.log(item);
 								//alert ("<div id=card"+i+" class='cardcont'>");
 								prend+="<div id= 'card"+i+"' class='cardcont'>";
-	                			prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
+								prend+="<a href='"+item.RutaFoto+"' class='MagicThumb' data-options='expandEffect:fade;'><img id='imgcardcont' class='responsive-img' src='"+item.RutaFoto+"' /></a>";
+	                			// prend+="<img id='imgcardcont' class='responsive-img' src= "+item.RutaFoto+">";
 	                			prend+="<div class='inside'>";
 	                			prend+= "<i id='info_outline' class='small material-icons'>info_outline</i>";
 								prend+="<br><label id='lblnomCard'> Nombre: " + item.Nombre +' '+ item.Apellido+"</label>";
 	                			prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
 	                			prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
-	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
+								prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
-	                			prend+="<div class ='middle'>";
-								prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
-								prend+="</div>"; 
-	                			//prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
+								prend+="<div class='btnLoQuiero'>";
+								prend+="<div id='btnLike'class='btnLike que'>";
+								prend+=  "<a class='txtLoQuiero'>¡LO QUIERO!</a>";
+								prend+=	"<i id='"+item.IDPublicacion+"|"+item.IDUsuario+"' class='que fa-solid fa-arrows-rotate' aria-hidden='true'></i>";
+								prend+="</div>";
+								prend+="</div>";
+	                			// prend+="<div class ='middle'>";
+								// prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
+								// prend+="</div>"; 
 	            				prend+="</div>";
                     			
 	            				contador++;
@@ -159,14 +164,18 @@ $("#barrabusqueda").keydown(function(e){
 	                			prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
 	                			prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
-	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
-
+								prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
-	                			prend+="<div class ='middle'>";
-	                			prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
-	                			prend+="</div>"; 
-	                			//prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
-	            				prend+="</div>";
+								prend+="<div class='btnLoQuiero'>";
+								prend+="<div class='btnLike que'>";
+								prend+=  "<a class='txtLoQuiero'>¡LO QUIERO!</a>";
+								prend+=	"<i id='"+item.IDPublicacion+"|"+item.IDUsuario+"'class='que fa-solid fa-arrows-rotate' aria-hidden='true'></i>";
+								prend+="</div>";
+								prend+="</div>";
+	                			prend+= "</div>";
+	                			// prend+="<div class ='middle'>";
+	                			// prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
+	                			// prend+="</div>"; 
                     			
 	            				contador++;
                     			//$("#imgcardcont").append(details);
@@ -192,6 +201,12 @@ $("#barrabusqueda").keydown(function(e){
 
 function quiero(){
 	$(".que").click(function(e){
+		
+		$(this).addClass("btnLikeado");
+		$(this).removeClass("btnLike");
+		$(this).addClass("fa-check");
+		$(this).removeClass("fa-arrows-rotate");
+		$(".fa-check").css("color","white");
 		dat=$(this).prop("id").split("|");
 		// alert (dat[0]+"xxxx"+dat[1]);
 		$.ajax({
@@ -265,14 +280,19 @@ $(".atajos").click(function(e){
 	                			prend+= "<br><label id ='lbldescCard'> Descripcion: " + item.Descripcion + "</label>";
 	                			prend+= "<br><label id ='lbltalleCard'> Talle: " + item.Talle + "</label>";
 	                			prend+= "<br><label id ='lblusadoCard'> Usado: " + item.Usado + "</label>";
-	                			prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
-
+								prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
-	                			prend+="<div class ='middle'>";
-	                			prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
-	                			prend+="</div>"; 
-	                			//prend+= "<button class='que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>";
-	            				prend+="</div>";
+								prend+="<div class='btnLoQuiero'>";
+								prend+="<div class='btnLike que'>";
+								prend+=  "<a class='txtLoQuiero'>¡LO QUIERO!</a>";
+								prend+=	"<i id='"+item.IDPublicacion+"|"+item.IDUsuario+"' class='que fa-solid fa-arrows-rotate' aria-hidden='true'></i>";
+								prend+="</div>";
+								prend+="</div>";
+	                			prend+= "</div>";
+	                			// prend+="<div class ='middle'>";
+	                			// prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
+	                			// prend+="</div>"; 
+	            				
 							  
 							  contador++;
 							  //$("#imgcardcont").append(details);

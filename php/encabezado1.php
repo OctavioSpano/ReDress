@@ -8,11 +8,14 @@ session_start();?>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="../css/materialize.css" />
     <link rel="stylesheet" href="../css/styles1.css" />
+    <link rel="icon" href="../imagenes/Logo.png"> 
+    <link type="text/css" rel="stylesheet" href="magicthumb/magicthumb.css"/>
+    <script type="text/javascript" src="magicthumb/magicthumb.js"></script>
      <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script> 
      <script src="../js/materialize.js" type="text/javascript"></script> 
      <script src="../js/redress.js" type="text/javascript"></script> 
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      
+     <script src="https://kit.fontawesome.com/6f93278a56.js" crossorigin="anonymous"></script>
   </head>
     <body>
   	<div id="login-reg" class="acceso-usuario">
@@ -110,9 +113,9 @@ session_start();?>
               </a>-->
         </div>
 </div>
-<div class="prendascont">
+<!-- <div class="prendascont">
         <div class="col s4 l2"></div>
-</div>
+</div> -->
 <!--<button value="remera" onclick="atajosfunc() "id="btnRem">
   <img id="btnremera"src="../imagenes/Boton Remera.png">
 </button>
