@@ -444,7 +444,7 @@ body{
 
 .btn-floating {
   display: inline-block;
-  color: #fff;
+  color: #686FFD;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -452,7 +452,7 @@ body{
   height: 40px;
   line-height: 40px;
   padding: 0;
-  background-color: #26a69a;
+  background-color: #2B3241;
   border-radius: 50%;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
@@ -461,7 +461,9 @@ body{
 }
 
 .btn-floating:hover {
-  background-color: #26a69a;
+/*  background-color: #26a69a;*/
+box-shadow: 0px 0px 30px #686FFD;
+transition: all 2s;
 }
 
 .btn-floating:before {
