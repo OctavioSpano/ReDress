@@ -192,7 +192,7 @@ $sal.="            </div>";
 $sal.="        <label class='lblUsado'>Usado: </label>";
 $sal.="              <input type = 'checkbox' name = 'chbxUsado' class = 'chbxUsado' ".$usado.">";
 $sal.="              <div id='".$row['IDPublicacion']."' class='botonE'>";             
-$sal.="              <input id='".$row['IDPublicacion']."' name='botonP' class='botonP' type='Submit' value='Publicar'>";
+$sal.="              <input id='".$row['IDPublicacion']."' name='botonP' class='botonP' type='Submit' value='Editar'>";
 $sal.="              </div>";          
 $sal.="              <div class='lista_talle'>";
 $sal.="              <label class='lblTalle'>Talle: </label>";
