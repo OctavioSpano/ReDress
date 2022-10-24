@@ -163,7 +163,7 @@ switch ($row['Talle']){
 $sal.="<a href='homeScreen.php'>"; 
 $sal.=    "<img id='flechaatras' src='../imagenes/flechaatras.png'  >"; 
 $sal.=    "</a>"; 
-$sal.=    "<form id='frm1' method='POST' action='edicion.php' enctype='multipart/form-data'>";
+$sal.=    "<form id='frm1' method='POST' action='edicion.php?idEdicion=".$IDPrenda."' enctype='multipart/form-data'>";
 $sal.= "<div class='container'>";
 $sal.="           <h1 class='h1'>Edita tu prenda</h1>";
 $sal.="          <div class='tipo_prenda'>";
@@ -192,7 +192,7 @@ $sal.="            </div>";
 $sal.="        <label class='lblUsado'>Usado: </label>";
 $sal.="              <input type = 'checkbox' name = 'chbxUsado' class = 'chbxUsado' ".$usado.">";
 $sal.="              <div id='".$row['IDPublicacion']."' class='botonE'>";             
-$sal.="              <input id='".$row['IDPublicacion']."' name='botonP' class='botonP' type='Submit' value='Editar'>";
+$sal.="              <input id='".$row['IDPublicacion']."' name='botonE' class='botonP' type='Submit' value='Editar'>";
 $sal.="              </div>";          
 $sal.="              <div class='lista_talle'>";
 $sal.="              <label class='lblTalle'>Talle: </label>";
