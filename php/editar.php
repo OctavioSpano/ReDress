@@ -184,7 +184,7 @@ $sal.="                 <textarea class='lbl_desc'name='desc' rows='5' resize pl
 $sal.="                  <span></span>";
 $sal.="              </div>";
 $sal.="              <div class='form-group'>";
-$sal.="                <input class='file-input' type='file' name='uploadfile' id='ufile' value='".$row['RutaFoto']."' required accept='image/*' />";
+$sal.="                <input class='file-input' type='file' name='uploadfile' id='ufile' value='".$row['RutaFoto']."' accept='image/*' />";
 $sal.="                <div id='prew'>";
 $sal.="                 <img class='responsive-img' src=".$row['RutaFoto']." width='auto' height='auto'/>";
 $sal.="              </div>";

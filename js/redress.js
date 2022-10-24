@@ -32,10 +32,9 @@ function prendainicio(){
 								prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
 								prend+="<div class='btnLoQuiero'>";
-								prend+="<div id='btnLike'class='btnLike que'>";
-								prend+=  "<a class='txtLoQuiero'>¡LO QUIERO!</a>";
-								prend+=	"<i id='"+item.IDPublicacion+"|"+item.IDUsuario+"' class='que fa-solid fa-arrows-rotate' aria-hidden='true'></i>";
-								prend+="</div>";
+								prend+="<div id='Cx"+item.IDPublicacion+"x"+item.IDUsuario+"' class='btnLike que'>";
+								prend+= "<a class='txtLoQuiero'>¡LO QUIERO!</a>";
+								prend+=	"<i id='Ix"+item.IDPublicacion+"x"+item.IDUsuario+"' class='que fa-solid fa-arrows-rotate' aria-hidden='true'></i>";								prend+="</div>";
 								prend+="</div>";
 	                			// prend+="<div class ='middle'>";
 								// prend+=	"<a class='btnlike btnloquiero que' id='"+item.IDPublicacion+"|"+item.IDUsuario+"'>¡Lo Quiero!</a>";
@@ -167,9 +166,9 @@ $("#barrabusqueda").keydown(function(e){
 								prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
 								prend+="<div class='btnLoQuiero'>";
-								prend+="<div class='btnLike que'>";
-								prend+=  "<a class='txtLoQuiero'>¡LO QUIERO!</a>";
-								prend+=	"<i id='"+item.IDPublicacion+"|"+item.IDUsuario+"'class='que fa-solid fa-arrows-rotate' aria-hidden='true'></i>";
+								prend+="<div id='Cx"+item.IDPublicacion+"x"+item.IDUsuario+"' class='btnLike que'>";
+								prend+= "<a class='txtLoQuiero'>¡LO QUIERO!</a>";
+								prend+=	"<i id='Ix"+item.IDPublicacion+"x"+item.IDUsuario+"' class='que fa-solid fa-arrows-rotate' aria-hidden='true'></i>";
 								prend+="</div>";
 								prend+="</div>";
 	                			prend+= "</div>";
@@ -201,19 +200,20 @@ $("#barrabusqueda").keydown(function(e){
 
 function quiero(){
 	$(".que").click(function(e){
+		dat=$(this).prop("id").split("x");
 		
-		$(this).addClass("btnLikeado");
-		$(this).removeClass("btnLike");
-		$(this).addClass("fa-check");
-		$(this).removeClass("fa-arrows-rotate");
+		$("#Cx"+dat[1]+"x"+dat[2]+"").addClass("btnLikeado");
+		$("#Cx"+dat[1]+"x"+dat[2]+"").removeClass("btnLike");
+		$("#Ix"+dat[1]+"x"+dat[2]+"").addClass("fa-check");
+		$("#Ix"+dat[1]+"x"+dat[2]+"").removeClass("fa-arrows-rotate");
 		$(".fa-check").css("color","white");
-		dat=$(this).prop("id").split("|");
+		//dat=$(this).prop("id").split("|");
 		// alert (dat[0]+"xxxx"+dat[1]);
 		$.ajax({
 			  type: 'POST',
 			  url: '../php/reserva.php',
 	          dataType: "json",
-			  data: 'IDP=' + dat[0]+'&IDO='+dat[1]+'' ,
+			  data: 'IDP=' + dat[1]+'&IDO='+dat[2]+'' ,
 			  success: function (datos) {
 			  	
 // 				// $.each(datos, function(i, item) {
@@ -283,9 +283,9 @@ $(".atajos").click(function(e){
 								prend+= "<br><label id ='lblcolorCard'> Color: " + item.Color + "</label>";
 	                			prend+= "</div>";
 								prend+="<div class='btnLoQuiero'>";
-								prend+="<div class='btnLike que'>";
+								prend+="<div id='Cx"+item.IDPublicacion+"x"+item.IDUsuario+"' class='btnLike que'>";
 								prend+=  "<a class='txtLoQuiero'>¡LO QUIERO!</a>";
-								prend+=	"<i id='"+item.IDPublicacion+"|"+item.IDUsuario+"' class='que fa-solid fa-arrows-rotate' aria-hidden='true'></i>";
+								prend+=	"<i id='Ix"+item.IDPublicacion+"x"+item.IDUsuario+"' class='que fa-solid fa-arrows-rotate' aria-hidden='true'></i>";
 								prend+="</div>";
 								prend+="</div>";
 	                			prend+= "</div>";
