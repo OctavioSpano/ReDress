@@ -160,7 +160,7 @@ switch ($row['Talle']){
   
 <?php
 
-$sal.="<a href='homeScreen.php'>"; 
+$sal.="<a href='misprendas.php'>"; 
 $sal.=    "<img id='flechaatras' src='../imagenes/flechaatras.png'  >"; 
 $sal.=    "</a>"; 
 $sal.=    "<form id='frm1' method='POST' action='edicion.php?idEdicion=".$IDPrenda."' enctype='multipart/form-data'>";

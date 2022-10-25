@@ -614,7 +614,7 @@ align-content: center;
 text-align: center;
 }
 
-.cardcont :hover{
+.cardcont:hover img{
 transform: scale(1);
 box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
 }

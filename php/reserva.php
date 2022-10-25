@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION['idu'])){
+   header("Location:login.php");
+}
 
 
 $publi = $_REQUEST['IDP'];
